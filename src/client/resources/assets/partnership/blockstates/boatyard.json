@@ -1,0 +1,29 @@
+{
+  "multipart": [
+    { "when": { "facing": "north", "extended": "false" },
+      "apply": { "model": "partnership:block/boatyard-right", "uvlock": false }
+    },
+    { "when": { "facing": "east", "extended": "false" },
+      "apply": { "model": "partnership:block/boatyard-right", "y": 90, "uvlock": false }
+    },
+    { "when": { "facing": "south", "extended": "false" },
+      "apply": { "model": "partnership:block/boatyard-right", "y": 180, "uvlock": false }
+    },
+    { "when": { "facing": "west", "extended": "false" },
+      "apply": { "model": "partnership:block/boatyard-right", "y": 270, "uvlock": false }
+    },
+
+    { "when": { "facing": "north", "extended": "true" },
+      "apply": { "model": "partnership:block/boatyard-left", "uvlock": false }
+    },
+    { "when": { "facing": "east", "extended": "true" },
+      "apply": { "model": "partnership:block/boatyard-left", "y": 90, "uvlock": false }
+    },
+    { "when": { "facing": "south", "extended": "true" },
+      "apply": { "model": "partnership:block/boatyard-left", "y": 180, "uvlock": false }
+    },
+    { "when": { "facing": "west", "extended": "true" },
+      "apply": { "model": "partnership:block/boatyard-left", "y": 270, "uvlock": false }
+    }
+  ]
+}

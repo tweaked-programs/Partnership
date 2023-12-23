@@ -1,0 +1,54 @@
+{
+	"schemaVersion": 1,
+	"id": "partnership",
+	"version": "${version}",
+	"name": "Partnership",
+	"description": "Drive ships with partners.",
+	"authors": [
+		"Sammy L. Koch"
+	],
+	"contact": {
+		"homepage": "https://tweaked-programs.cc/",
+		"sources": "https://github.com/tweaked-programs/"
+	},
+	"license": "MIT",
+	"icon": "assets/partnership/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			{
+				"value": "cc.tweaked_programs.partnership.client.PartnershipClient",
+				"adapter": "kotlin"
+			}
+		],
+		"main": [
+			{
+				"value": "cc.tweaked_programs.partnership.main.Partnership",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "cc.tweaked_programs.partnership.main.PartnershipDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"partnership.mixins.json",
+		{
+			"config": "partnership.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.2",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.21"
+	},
+	"recommends": {
+		"modmenu": ">=${modmenu_version}"
+	}
+}

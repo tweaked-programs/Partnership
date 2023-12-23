@@ -1,0 +1,11 @@
+{
+  "block.partnership.boatyard": "Werftstation",
+  "tooltip.block.partnership.boatyard": "Benötigt um Boote herzustellen, zu verbessern oder zu reparieren.\nErmöglicht auch die herstellung von weiteren mitteln, die für das Meer benötigt werden.",
+
+  "item.partnership.captains_hat": "Kapitänsmütze",
+
+  "tooltip.partnership.holdShiftForMore": "Halte [%s] für weitere Details",
+  "key.keyboard.shift": "Umschalttaste",
+
+  "itemGroup.partnership": "Partnership"
+}

@@ -1,0 +1,12 @@
+
+{
+  "block.partnership.boatyard": "Boatyard Table",
+  "tooltip.block.partnership.boatyard": "Required to manufacture, improve or repair boats.\nAlso allows the production of other resources and tools needed for the sea.",
+
+  "item.partnership.captains_hat": "Captain's Hat",
+
+  "tooltip.partnership.holdShiftForMore": "Hold [%s] for more details",
+  "key.keyboard.shift": "Shift",
+
+  "itemGroup.partnership": "Partnership"
+}

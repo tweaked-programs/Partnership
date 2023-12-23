@@ -1,0 +1,11 @@
+{
+  "block.partnership.boatyard": "Shipwright's Plank",
+  "tooltip.block.partnership.boatyard": "Arr! Required to craft, enhance, or mend boats.\\nAlso grants ye the power to forge other treasures and tools vital for the open sea.",
+
+  "item.partnership.captains_hat": "Crown o' the Ship",
+
+  "tooltip.partnership.holdShiftForMore": "Hold [%s] for more secrets",
+  "key.keyboard.shift": "Hijack key",
+
+  "itemGroup.partnership": "Partnership"
+}
