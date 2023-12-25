@@ -1,6 +1,14 @@
 {
   "block.partnership.boatyard": "boatyard in a nutshell",
-  "tooltip.block.partnership.boatyard": "rekwird to maNuFACTURE Emprove OR REPAIr boatz??\n also aLOWZ teh PrODUcshun for othr resourcez an tolz nedd fr teH see??",
+  "tooltip.block.partnership.boatyard": "rekwird to maNuFACTURE Emprove OR REPAIr boatz??\n also aLOWZ teh PrODUcshun for othr resourcez an tolz nedd fr teH see",
+
+  "block.partnership.metal_scaffold": "MeTl Scafuwld",
+
+  "item.partnership.kayak": "KaYAAk",
+  "tooltip.item.partnership.kayak": "A bit biggr thAn ur usual brrAt, but it gotz room fur up to 3 frinds!",
+
+  "item.partnership.paddle": "paddl",
+  "tooltip.item.partnership.paddle": "haz +1 KnOkbak inchAntmnt az  bas??",
 
   "item.partnership.captains_hat": "CAPTAInz hat",
 

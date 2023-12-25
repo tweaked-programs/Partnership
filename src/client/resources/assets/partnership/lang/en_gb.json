@@ -2,6 +2,14 @@
   "block.partnership.boatyard": "Boatyard Table",
   "tooltip.block.partnership.boatyard": "Required to manufacture, improve or repair boats.\nAlso allows the production of other resources and tools needed for the sea.",
 
+  "block.partnership.metal_scaffold": "Metal Scaffold",
+
+  "item.partnership.kayak": "Kayak",
+  "tooltip.item.partnership.kayak": "Slightly larger than a normal boat, but it has room for up to three passengers.",
+
+  "item.partnership.paddle": "Paddle",
+  "tooltip.item.partnership.paddle": "Has +1 knockback enchantment as a base.",
+
   "item.partnership.captains_hat": "Captain's Cap",
 
   "tooltip.partnership.holdShiftForMore": "Hold [%s] for more details",

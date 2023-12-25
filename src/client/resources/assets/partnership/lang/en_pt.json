@@ -2,6 +2,14 @@
   "block.partnership.boatyard": "Shipwright's Plank",
   "tooltip.block.partnership.boatyard": "Arr! Required to craft, enhance, or mend boats.\\nAlso grants ye the power to forge other treasures and tools vital for the open sea.",
 
+  "block.partnership.metal_scaffold": "Steel buildin' frame",
+
+  "item.partnership.kayak": "Kayak",
+  "tooltip.item.partnership.kayak": "A tad bigger than yer average vessel, but she's got space for a crew of three hearty shipmates!",
+
+  "item.partnership.paddle": "Oar",
+  "tooltip.item.partnership.paddle": "Be boastin' a +1 shove-away charm from the start",
+
   "item.partnership.captains_hat": "Crown o' the Ship",
 
   "tooltip.partnership.holdShiftForMore": "Hold [%s] for more secrets",
