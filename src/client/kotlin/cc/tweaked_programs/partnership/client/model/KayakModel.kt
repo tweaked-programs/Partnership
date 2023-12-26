@@ -73,7 +73,7 @@ class KayakModel(model: ModelPart) : EntityModel<Kayak>(), WaterPatchModel {
             paddle.setPos(6.0F, -20.5F, -1.4F)
             paddle.setRotation(1.7F, 1.4F, -0.1F)
         } else if (entity != null) {
-            paddle.setPos(0.0F, 0.0F, 4F-kayak.getPassengerZOffset(entity)*22F)
+            paddle.setPos(0.0F, 0.0F, 2.5F-kayak.getPassengerZOffset(entity)*18F)
             paddle.setRotation(
                 (sin(time) * 0.2F),
                 (sin(time) * -0.6F),

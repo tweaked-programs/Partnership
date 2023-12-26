@@ -22,16 +22,18 @@ TODO
 		[ ] Make boats fixable within leashes
 	[-] Add decorative stuff
 		[x] Metal scaffolding
-		[ ] Marker buoys for borders on sea
+		[x] Marker buoys for borders on sea
 		[ ] Light towers lamp
 		[ ] Boat Cradle
 	[-] Fun stuff
 		[x] Paddle
-		[ ] Hats
-			[ ] Marine hat
-		[ ] Marine Cannon
-		[ ] Schiffe versenken game (maybe not...)
-	[ ] Redo textures but good this time
+		[-] Hats
+			[x] Captain's hat
+			[x] Sailor's cap
+			[ ] Pirate hat
+		[-] Marine Cannon
+	[ ] EMI Support
+	[-] Redo textures but good this time
 	[ ] Add recipes
 	[ ] Sort Item Group and secondary groups for items
 */

@@ -2,7 +2,16 @@
   "block.partnership.boatyard": "Werftstation",
   "tooltip.block.partnership.boatyard": "Benötigt um Boote herzustellen, zu verbessern oder zu reparieren.\nErmöglicht auch die herstellung von weiteren mitteln, die für das Meer benötigt werden.",
 
-  "block.partnership.metal_scaffold": "Metallgerüst",
+  "block.partnership.metal_scaffolding": "Metallgerüst",
+
+  "block.partnership.buoy": "Boje",
+  "tooltip.block.partnership.buoy": "Zum Markieren von Grenzen oder Besonderheiten auf dem Gewässer.",
+
+  "block.partnership.captains_hat": "Kapitänsmütze",
+  "tooltip.block.partnership.captains_hat": "Wird vom Kapitän persönlich getragen.",
+
+  "block.partnership.sailors_hat": "Matrosenkappe",
+  "tooltip.block.partnership.sailors_hat": "Wird von der Mannschaft getragen.",
 
   "item.partnership.kayak": "Kajak",
   "tooltip.item.partnership.kayak": "Etwas größer als ein herkömmliches Boot, bietet jedoch genug Platz für bis zu drei Passagiere.",
@@ -10,10 +19,11 @@
   "item.partnership.paddle": "Paddel",
   "tooltip.item.partnership.paddle": "Hat +1 Rückstoß Verzauberung als Basis.",
 
-  "item.partnership.captains_hat": "Kapitänsmütze",
+  "item.partnership.canvas_roll": "Segeltuchrolle",
+  "item.partnership.plank": "Planke",
 
   "tooltip.partnership.holdShiftForMore": "Halte [%s] für weitere Details",
   "key.keyboard.shift": "Umschalttaste",
 
-  "itemGroup.partnership": "Partnership"
+  "itemGroup.partnership": "Partnership Mod"
 }

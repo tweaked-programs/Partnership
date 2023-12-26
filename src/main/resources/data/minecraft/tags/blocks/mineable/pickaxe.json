@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "partnership:boatyard"
+    "partnership:boatyard",
+    "partnership:metal_scaffolding"
   ]
 }

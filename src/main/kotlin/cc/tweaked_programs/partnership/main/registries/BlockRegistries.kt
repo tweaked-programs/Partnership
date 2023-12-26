@@ -1,8 +1,11 @@
 package cc.tweaked_programs.partnership.main.registries
 
 import cc.tweaked_programs.partnership.main.MOD_ID
+import cc.tweaked_programs.partnership.main.block.BuoyBlock
+import cc.tweaked_programs.partnership.main.block.GenericPlacableHat
 import cc.tweaked_programs.partnership.main.block.MetalScaffoldingBlock
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlock
+import cc.tweaked_programs.partnership.main.block.cannon.MarineCannonBlock
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
@@ -30,17 +33,48 @@ object BlockRegistries {
         BoatyardBlock(
             properties
                 .strength(1F)
+                .sounds(SoundType.STONE)
         )
     }
-    val METAL_SCAFFOLDING: Block = create(
-        name = "metal_scaffold"
+
+    val METAL_SCAFFOLDING: MetalScaffoldingBlock = create(
+        name = "metal_scaffolding"
     ) { properties ->
         MetalScaffoldingBlock(
             properties
-                .strength(1.2F)
-                .requiresTool()
+                .strength(0.9F)
                 .sounds(SoundType.METAL)
                 .nonOpaque()
         )
+    }
+
+    val BUOY: BuoyBlock = create(
+        name = "buoy"
+    ) { properties ->
+        BuoyBlock(properties
+            .strength(0.1F)
+            .nonOpaque()
+            .sounds(SoundType.CHAIN))
+    }
+
+    val CAPTAINS_HAT: GenericPlacableHat = create(
+        name = "captains_hat"
+    ) { properties ->
+        GenericPlacableHat(properties.sounds(SoundType.WOOL))
+    }
+
+    val SAILORS_HAT: GenericPlacableHat = create(
+        name = "sailors_hat"
+    ) { properties ->
+        GenericPlacableHat(properties.sounds(SoundType.WOOL))
+    }
+
+    val MARINE_CANNON = create(
+        name = "marine_cannon"
+    ) { properties ->
+        MarineCannonBlock(properties
+            .sounds(SoundType.STONE)
+            .strength(1.25F)
+            .nonOpaque())
     }
 }

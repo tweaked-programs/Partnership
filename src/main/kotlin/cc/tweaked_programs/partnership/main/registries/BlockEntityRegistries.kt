@@ -2,6 +2,7 @@ package cc.tweaked_programs.partnership.main.registries
 
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlockEntity
+import cc.tweaked_programs.partnership.main.block.cannon.MarineCannonBlockEntity
 import net.fabricmc.fabric.api.`object`.builder.v1.block.entity.FabricBlockEntityTypeBuilder
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Registry
@@ -26,8 +27,13 @@ object BlockEntityRegistries {
         )
     }
 
-    val BOATYARD_BE = create(
+    val BOATYARD = create(
         name = "boatyard_block_entity",
         block = BlockRegistries.BOATYARD
     ) { pos, state -> BoatyardBlockEntity(pos, state) }
+
+    val MARINE_CANNON = create(
+        name = "marine_cannon_block_entity",
+        block = BlockRegistries.MARINE_CANNON
+    ) { pos, state -> MarineCannonBlockEntity(pos, state) }
 }

@@ -2,7 +2,16 @@
   "block.partnership.boatyard": "Shipwright's Plank",
   "tooltip.block.partnership.boatyard": "Arr! Required to craft, enhance, or mend boats.\\nAlso grants ye the power to forge other treasures and tools vital for the open sea.",
 
-  "block.partnership.metal_scaffold": "Steel buildin' frame",
+  "block.partnership.metal_scaffolding": "Steel buildin' frame",
+
+  "block.partnership.buoy": "Sea Markers",
+  "tooltip.block.partnership.buoy": "For markin' the bounds or peculiarities on the mighty seas.",
+
+  "block.partnership.captains_hat": "Crown o' the Ship",
+  "tooltip.block.partnership.captains_hat": "Worn by the Cap'n himself, aye!",
+
+  "block.partnership.sailors_hat": "Sailor's Headgear",
+  "tooltip.block.partnership.sailors_hat": "Adorned by the ship's scallywags.",
 
   "item.partnership.kayak": "Kayak",
   "tooltip.item.partnership.kayak": "A tad bigger than yer average vessel, but she's got space for a crew of three hearty shipmates!",
@@ -10,10 +19,11 @@
   "item.partnership.paddle": "Oar",
   "tooltip.item.partnership.paddle": "Be boastin' a +1 shove-away charm from the start",
 
-  "item.partnership.captains_hat": "Crown o' the Ship",
+  "item.partnership.canvas_roll": "Sailcloth Scroll",
+  "item.partnership.plank": "Ship's Plank",
 
   "tooltip.partnership.holdShiftForMore": "Hold [%s] for more secrets",
   "key.keyboard.shift": "Hijack key",
 
-  "itemGroup.partnership": "Partnership"
+  "itemGroup.partnership": "Partnership Mod"
 }

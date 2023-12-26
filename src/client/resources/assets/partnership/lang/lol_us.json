@@ -2,18 +2,28 @@
   "block.partnership.boatyard": "boatyard in a nutshell",
   "tooltip.block.partnership.boatyard": "rekwird to maNuFACTURE Emprove OR REPAIr boatz??\n also aLOWZ teh PrODUcshun for othr resourcez an tolz nedd fr teH see",
 
-  "block.partnership.metal_scaffold": "MeTl Scafuwld",
+  "block.partnership.metal_scaffolding": "MeTl Scafuwld",
+
+  "block.partnership.buoy": "BUoi",
+  "tooltip.block.partnership.buoy": "marrk Borderz oR HIGhlightz on watr",
+
+  "block.partnership.captains_hat": "CAPTAInzparkls",
+  "tooltip.block.partnership.captains_hat": "weared by teh captain, k",
+
+  "block.partnership.sailors_hat": "saILORZ HAtz",
+  "tooltip.block.partnership.sailors_hat": "Worn by the crew.",
 
   "item.partnership.kayak": "KaYAAk",
-  "tooltip.item.partnership.kayak": "A bit biggr thAn ur usual brrAt, but it gotz room fur up to 3 frinds!",
+  "tooltip.item.partnership.kayak": "A bit bigr thAn ur usual brrAt, but it gotz room fur up to 3 frinds!",
 
   "item.partnership.paddle": "paddl",
-  "tooltip.item.partnership.paddle": "haz +1 KnOkbak inchAntmnt az  bas??",
+  "tooltip.item.partnership.paddle": "haz 1 mor KnOkbak inchAntmnt az  bas??",
 
-  "item.partnership.captains_hat": "CAPTAInz hat",
+  "item.partnership.canvas_roll": "canvaz rOL",
+  "item.partnership.plank": "plank",
 
-  "tooltip.partnership.holdShiftForMore": "hold [%s] fr moar deetailz K",
+  "tooltip.partnership.holdShiftForMore": "huld [%s] fr moar deetailz K",
   "key.keyboard.shift": "shif",
 
-  "itemGroup.partnership": "Partnership"
+  "itemGroup.partnership": "Partnership Mod"
 }

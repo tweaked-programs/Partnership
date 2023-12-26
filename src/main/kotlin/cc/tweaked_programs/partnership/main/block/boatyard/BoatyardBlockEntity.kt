@@ -4,7 +4,7 @@ import cc.tweaked_programs.partnership.main.Partnership.logger
 import cc.tweaked_programs.partnership.main.menu.BoatyardMenu
 import cc.tweaked_programs.partnership.main.menu.ImplementedInventory
 import cc.tweaked_programs.partnership.main.recipe.BoatyardRecipe
-import cc.tweaked_programs.partnership.main.registries.BlockEntityRegistries.BOATYARD_BE
+import cc.tweaked_programs.partnership.main.registries.BlockEntityRegistries.BOATYARD
 import net.minecraft.core.BlockPos
 import net.minecraft.core.NonNullList
 import net.minecraft.nbt.CompoundTag
@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties
 
 // TODO("Make sides locked for item pulling from last slot")
 // TODO("Some mouse shortcuts dont work properly")
-class BoatyardBlockEntity(val pos: BlockPos, val state: BlockState) : BlockEntity(BOATYARD_BE, pos, state),
+class BoatyardBlockEntity(val pos: BlockPos, val state: BlockState) : BlockEntity(BOATYARD, pos, state),
     MenuProvider, ImplementedInventory, CraftingContainer {
 
     val isDummy: Boolean = state.getValue(BlockStateProperties.EXTENDED)
