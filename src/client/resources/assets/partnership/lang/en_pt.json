@@ -7,11 +7,14 @@
   "block.partnership.buoy": "Sea Markers",
   "tooltip.block.partnership.buoy": "For markin' the bounds or peculiarities on the mighty seas.",
 
-  "block.partnership.captains_hat": "Crown o' the Ship",
-  "tooltip.block.partnership.captains_hat": "Worn by the Cap'n himself, aye!",
+  "item.partnership.captains_hat": "Crown o' the Ship",
+  "tooltip.item.partnership.captains_hat": "Worn by the Cap'n himself, aye!",
 
-  "block.partnership.sailors_hat": "Sailor's Headgear",
-  "tooltip.block.partnership.sailors_hat": "Adorned by the ship's scallywags.",
+  "item.partnership.sailors_hat": "Sailor's Headgear",
+  "tooltip.item.partnership.sailors_hat": "Adorned by the ship's scallywags.",
+
+  "block.partnership.marine_cannon": "Seafarin' Blaster",
+  "tooltip.block.partnership.marine_cannon": "Ye can set it up and let loose from a chosen angle. Sends ships to Davy Jones' locker the moment it connects. Must be loaded with a Cannonball and up to three Gunpowder, then give it a go with a redstone signal",
 
   "item.partnership.kayak": "Kayak",
   "tooltip.item.partnership.kayak": "A tad bigger than yer average vessel, but she's got space for a crew of three hearty shipmates!",
@@ -22,8 +25,18 @@
   "item.partnership.canvas_roll": "Sailcloth Scroll",
   "item.partnership.plank": "Ship's Plank",
 
+  "item.partnership.cannonball": "Matey Missile",
+
   "tooltip.partnership.holdShiftForMore": "Hold [%s] for more secrets",
   "key.keyboard.shift": "Hijack key",
+
+  "menu.partnership.marine_cannon.rotate": "click 'n haul to swivel the cannon",
+  "menu.partnership.marine_cannon.escape": "Escape to escape!",
+
+  "entity.partnership.kayak": "Kayak",
+  "entity.partnership.cannonball": "Matey Missile",
+
+  "emi.category.partnership.boatyard": "Shipwright's treasures",
 
   "itemGroup.partnership": "Partnership Mod"
 }

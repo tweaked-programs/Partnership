@@ -38,10 +38,14 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-language-kotlin:${fabric_kotlin_version}"
 
 	// Other dependencies
-	modImplementation "maven.modrinth:modmenu:${modmenu_version}" // Not required
+	modApi "maven.modrinth:modmenu:${modmenu_version}" // Not required
+	modApi "maven.modrinth:emi:${emi_version}"
 
 	// Dev environment
 	modRuntimeOnly "maven.modrinth:sodium:${sodium_version}"
+	modRuntimeOnly "maven.modrinth:modmenu:${modmenu_version}"
+	modRuntimeOnly "maven.modrinth:emi:${emi_version}"
+
 	//if (enable_iris) // For some reason this just always is true?
 	//	modRuntimeOnly "maven.modrinth:iris:${iris_version}"
 }

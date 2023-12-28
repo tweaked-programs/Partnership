@@ -7,11 +7,14 @@
   "block.partnership.buoy": "Boje",
   "tooltip.block.partnership.buoy": "Zum Markieren von Grenzen oder Besonderheiten auf dem Gewässer.",
 
-  "block.partnership.captains_hat": "Kapitänsmütze",
-  "tooltip.block.partnership.captains_hat": "Wird vom Kapitän persönlich getragen.",
+  "item.partnership.captains_hat": "Kapitänsmütze",
+  "tooltip.item.partnership.captains_hat": "Wird vom Kapitän persönlich getragen.",
 
-  "block.partnership.sailors_hat": "Matrosenkappe",
-  "tooltip.block.partnership.sailors_hat": "Wird von der Mannschaft getragen.",
+  "item.partnership.sailors_hat": "Matrosenkappe",
+  "tooltip.item.partnership.sailors_hat": "Wird von der Mannschaft getragen.",
+
+  "block.partnership.marine_cannon": "Marinekanone",
+  "tooltip.block.partnership.marine_cannon": "Kann konfiguriert und aus einem bestimmten Winkel abgefeuert werden. Versenkt Schiffe sofort, wenn sie getroffen werden.\nMuss mit einer Kanonenkugel und mit bis zu drei Schießpulver geladen und dann mit einem Redstone-Signal gestartet werden.",
 
   "item.partnership.kayak": "Kajak",
   "tooltip.item.partnership.kayak": "Etwas größer als ein herkömmliches Boot, bietet jedoch genug Platz für bis zu drei Passagiere.",
@@ -22,8 +25,18 @@
   "item.partnership.canvas_roll": "Segeltuchrolle",
   "item.partnership.plank": "Planke",
 
+  "item.partnership.cannonball": "Kanonenkugel",
+
   "tooltip.partnership.holdShiftForMore": "Halte [%s] für weitere Details",
   "key.keyboard.shift": "Umschalttaste",
+
+  "menu.partnership.marine_cannon.rotate": "Klicken und ziehen, um die Kanone zu drehen",
+  "menu.partnership.marine_cannon.escape": "Drücke [ESC] zum aufhören",
+
+  "entity.partnership.kayak": "Kajak",
+  "entity.partnership.cannonball": "Kanonenkugel",
+
+  "emi.category.partnership.boatyard": "Werftindustrie",
 
   "itemGroup.partnership": "Partnership Mod"
 }

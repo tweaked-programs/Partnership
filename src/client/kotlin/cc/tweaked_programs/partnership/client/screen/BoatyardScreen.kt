@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Inventory
 
 // TODO("Tooltips are not rendered properly")
 // TODO("Add helpful infos to 'note'")
-class BoatyardContainerScreen(
+class BoatyardScreen(
     menu: BoatyardMenu,
     inventory: Inventory,
     title: Component) : AbstractContainerScreen<BoatyardMenu>(menu, inventory, title) {

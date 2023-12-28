@@ -45,21 +45,10 @@ object ItemRegistries {
     val SAILORS_HAT: Hat
     val CANVAS_ROLL: Item
     val PLANK: Item
+    val MARINE_CANNON: Item
+    val CANNONBALL: Item
 
     init {
-        BOATYARD = create(
-            name = "boatyard",
-            category = CreativeModeTabs.FUNCTIONAL_BLOCKS,
-            categoryRegister = { content, item ->
-                content.addAfter(Items.CRAFTING_TABLE, item)
-            },
-            itemSupplier = { properties ->
-                BoatyardItem(
-                    BlockRegistries.BOATYARD,
-                    properties.maxCount(64))
-            }
-        )
-
         KAYAK = create(
             name = "kayak",
             category = CreativeModeTabs.TOOLS_AND_UTILITIES,
@@ -74,6 +63,19 @@ object ItemRegistries {
             }
         )
 
+        BOATYARD = create(
+            name = "boatyard",
+            category = CreativeModeTabs.FUNCTIONAL_BLOCKS,
+            categoryRegister = { content, item ->
+                content.addAfter(Items.CRAFTING_TABLE, item)
+            },
+            itemSupplier = { properties ->
+                BoatyardItem(
+                    BlockRegistries.BOATYARD,
+                    properties.maxCount(64))
+            }
+        )
+
         METAL_SCAFFOLDING = create(
             name = "metal_scaffolding",
             category = CreativeModeTabs.BUILDING_BLOCKS,
@@ -82,20 +84,6 @@ object ItemRegistries {
             },
             itemSupplier = { properties ->
                 BlockItem(BlockRegistries.METAL_SCAFFOLDING, properties.maxCount(64))
-            }
-        )
-
-        PADDLE = create(
-            name = "paddle",
-            category = CreativeModeTabs.COMBAT,
-            categoryRegister = { content, item ->
-                content.addAfter(Items.TRIDENT.asItem(), item)
-            },
-            itemSupplier = { properties ->
-            PaddleItem(1, 0.25F, (-1.8f), properties
-                .maxCount(1)
-                .defaultDurability(Tiers.WOOD.uses)
-                .durability(69))
             }
         )
 
@@ -112,6 +100,33 @@ object ItemRegistries {
             }
         )
 
+        MARINE_CANNON = create(
+            name = "marine_cannon",
+            category = CreativeModeTabs.REDSTONE_BLOCKS,
+            categoryRegister = { content, item ->
+                content.addAfter(Items.TNT, item)
+            },
+            itemSupplier = { properties ->
+                GenericDescriptiveBlockItem(
+                    BlockRegistries.MARINE_CANNON,
+                    properties.maxCount(64), true)
+            }
+        )
+
+        PADDLE = create(
+            name = "paddle",
+            category = CreativeModeTabs.COMBAT,
+            categoryRegister = { content, item ->
+                content.addAfter(Items.TRIDENT.asItem(), item)
+            },
+            itemSupplier = { properties ->
+                PaddleItem(1, 0.25F, (-1.8f), properties
+                    .maxCount(1)
+                    .defaultDurability(Tiers.WOOD.uses)
+                    .durability(69))
+            }
+        )
+
         CAPTAINS_HAT = create(
             name = "captains_hat",
             category = CreativeModeTabs.COMBAT,
@@ -119,7 +134,7 @@ object ItemRegistries {
                 content.addAfter(Items.TURTLE_HELMET, item)
             },
             itemSupplier = { properties ->
-                Hat(BlockRegistries.CAPTAINS_HAT, SoundEvents.ARMOR_EQUIP_LEATHER, properties.maxCount(1))
+                Hat(properties.maxCount(1))
             }
         )
 
@@ -130,7 +145,7 @@ object ItemRegistries {
                 content.addAfter(CAPTAINS_HAT, item)
             },
             itemSupplier = { properties ->
-                Hat(BlockRegistries.SAILORS_HAT, SoundEvents.ARMOR_EQUIP_LEATHER, properties.maxCount(1))
+                Hat(properties.maxCount(1))
             }
         )
 
@@ -148,6 +163,15 @@ object ItemRegistries {
             category = CreativeModeTabs.INGREDIENTS,
             categoryRegister = { content, item ->
                 content.addAfter(CANVAS_ROLL, item)
+            },
+            itemSupplier = { properties -> Item(properties.maxCount(64)) }
+        )
+
+        CANNONBALL = create(
+            name = "cannonball",
+            category = CreativeModeTabs.COMBAT,
+            categoryRegister = { content, item ->
+                content.addAfter(PLANK, item)
             },
             itemSupplier = { properties -> Item(properties.maxCount(64)) }
         )

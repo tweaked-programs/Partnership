@@ -11,31 +11,27 @@ import org.slf4j.LoggerFactory
 [x] = Finished
 
 TODO
-	[x] Finish Boatyard block
+	[x] Finish Boatyard block								POLISHING
 		[x] Make block
 		[x] Add block entity
 		[x] Make an interface for it
 		[x] Custom Recipe system etc.
 	[-] Make first custom boat (!!!)
-		[-] Add variants
+		[-] Add variants									POLISHING
 			[x] Kayak
-		[ ] Make boats fixable within leashes
-	[-] Add decorative stuff
+	[x] Add decorative stuff
 		[x] Metal scaffolding
-		[x] Marker buoys for borders on sea
-		[ ] Light towers lamp
-		[ ] Boat Cradle
-	[-] Fun stuff
+		[x] Marker buoys for borders on sea					POLISHING
+	[x] Fun stuff
 		[x] Paddle
-		[-] Hats
+		[x] Hats
 			[x] Captain's hat
 			[x] Sailor's cap
-			[ ] Pirate hat
-		[-] Marine Cannon
-	[ ] EMI Support
+		[x] Marine Cannon									POLISHING
+	[x] EMI Support
 	[-] Redo textures but good this time
 	[ ] Add recipes
-	[ ] Sort Item Group and secondary groups for items
+	[x] Sort Item Group and secondary groups for items
 */
 
 const val MOD_ID = "partnership"
@@ -47,6 +43,6 @@ object Partnership : ModInitializer {
 
 	override fun onInitialize() {
 		// WAKE UP
-		BlockRegistries; BlockEntityRegistries; ItemRegistries; GroupRegistries; MenuRegistries; RecipeRegistries; EntityRegistries
+		BlockRegistries; BlockEntityRegistries; ItemRegistries; GroupRegistries; MenuRegistries; RecipeRegistries; EntityRegistries; NetworkRegistries
 	}
 }

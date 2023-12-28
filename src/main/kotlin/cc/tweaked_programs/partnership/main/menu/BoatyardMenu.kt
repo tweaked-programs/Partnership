@@ -2,6 +2,9 @@ package cc.tweaked_programs.partnership.main.menu
 
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlockEntity
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlockEntity.Companion.INV_SIZE
+import cc.tweaked_programs.partnership.main.menu.inventory.GenericListenerSlot
+import cc.tweaked_programs.partnership.main.menu.inventory.GenericOutputOnlySlot
+import cc.tweaked_programs.partnership.main.menu.inventory.ImplementedInventory
 import cc.tweaked_programs.partnership.main.registries.MenuRegistries
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.Container

@@ -2,7 +2,6 @@ package cc.tweaked_programs.partnership.main.registries
 
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.block.BuoyBlock
-import cc.tweaked_programs.partnership.main.block.GenericPlacableHat
 import cc.tweaked_programs.partnership.main.block.MetalScaffoldingBlock
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlock
 import cc.tweaked_programs.partnership.main.block.cannon.MarineCannonBlock
@@ -55,18 +54,6 @@ object BlockRegistries {
             .strength(0.1F)
             .nonOpaque()
             .sounds(SoundType.CHAIN))
-    }
-
-    val CAPTAINS_HAT: GenericPlacableHat = create(
-        name = "captains_hat"
-    ) { properties ->
-        GenericPlacableHat(properties.sounds(SoundType.WOOL))
-    }
-
-    val SAILORS_HAT: GenericPlacableHat = create(
-        name = "sailors_hat"
-    ) { properties ->
-        GenericPlacableHat(properties.sounds(SoundType.WOOL))
     }
 
     val MARINE_CANNON = create(

@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "type": "directory",
+      "source": "entity/marine_cannon",
+      "prefix": "entity/marine_cannon/"
+    }
+  ]
+}

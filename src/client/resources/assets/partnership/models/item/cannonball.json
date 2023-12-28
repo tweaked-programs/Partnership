@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "partnership:item/sailors_hat"
+    "layer0": "partnership:item/cannonball"
   }
 }

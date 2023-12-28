@@ -2,7 +2,7 @@ package cc.tweaked_programs.partnership.main.block.boatyard
 
 import cc.tweaked_programs.partnership.main.Partnership.logger
 import cc.tweaked_programs.partnership.main.menu.BoatyardMenu
-import cc.tweaked_programs.partnership.main.menu.ImplementedInventory
+import cc.tweaked_programs.partnership.main.menu.inventory.ImplementedInventory
 import cc.tweaked_programs.partnership.main.recipe.BoatyardRecipe
 import cc.tweaked_programs.partnership.main.registries.BlockEntityRegistries.BOATYARD
 import net.minecraft.core.BlockPos

@@ -2,7 +2,6 @@ package cc.tweaked_programs.partnership.main.entity
 
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
-import net.minecraft.tags.EntityTypeTags
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.entity.EntityType

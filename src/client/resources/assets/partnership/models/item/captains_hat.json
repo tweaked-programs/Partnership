@@ -1,3 +1,6 @@
 {
-  "parent": "partnership:block/captains_hat"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "partnership:item/captains_hat"
+  }
 }

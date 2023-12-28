@@ -1,7 +1,7 @@
 package cc.tweaked_programs.partnership.main.recipe
 
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlockEntity.Companion.INV_SIZE
-import cc.tweaked_programs.partnership.main.menu.ImplementedInventory
+import cc.tweaked_programs.partnership.main.menu.inventory.ImplementedInventory
 import cc.tweaked_programs.partnership.main.recipe.BoatyardRecipe.Companion.Type.Companion.CODEC
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder

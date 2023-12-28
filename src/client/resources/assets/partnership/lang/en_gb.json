@@ -7,11 +7,14 @@
   "block.partnership.buoy": "Buoy",
   "tooltip.block.partnership.buoy": "Used to mark borders or highlights on water.",
 
-  "block.partnership.captains_hat": "Captain's Hat",
-  "tooltip.block.partnership.captains_hat": "Worn by the captain himself.",
+  "item.partnership.captains_hat": "Captain's Hat",
+  "tooltip.item.partnership.captains_hat": "Worn by the captain themself.",
 
-  "block.partnership.sailors_hat": "Sailor's Hat",
-  "tooltip.block.partnership.sailors_hat": "Worn by the crew.",
+  "item.partnership.sailors_hat": "Sailor's Hat",
+  "tooltip.item.partnership.sailors_hat": "Worn by the crew.",
+
+  "block.partnership.marine_cannon": "Marine Cannon",
+  "tooltip.block.partnership.marine_cannon": "Can be configured and fired from a given angle. Sinks ships immediately when hit.\nMust be loaded with a Cannonball and up to three Gunpowder and then started with a redstone signal.",
 
   "item.partnership.kayak": "Kayak",
   "tooltip.item.partnership.kayak": "Slightly larger than a normal boat, but it has room for up to three passengers.",
@@ -22,8 +25,18 @@
   "item.partnership.canvas_roll": "Canvas Roll",
   "item.partnership.plank": "Plank",
 
+  "item.partnership.cannonball": "Cannonball",
+
   "tooltip.partnership.holdShiftForMore": "Hold [%s] for more details",
   "key.keyboard.shift": "Shift",
+
+  "menu.partnership.marine_cannon.rotate": "Click and drag to rotate the cannon",
+  "menu.partnership.marine_cannon.escape": "Press [ESC] to stop",
+
+  "entity.partnership.kayak": "Kayak",
+  "entity.partnership.cannonball": "Cannonball",
+
+  "emi.category.partnership.boatyard": "Shipyard industry",
 
   "itemGroup.partnership": "Partnership Mod"
 }

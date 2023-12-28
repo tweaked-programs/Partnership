@@ -7,11 +7,14 @@
   "block.partnership.buoy": "BUoi",
   "tooltip.block.partnership.buoy": "marrk Borderz oR HIGhlightz on watr",
 
-  "block.partnership.captains_hat": "CAPTAInzparkls",
-  "tooltip.block.partnership.captains_hat": "weared by teh captain, k",
+  "item.partnership.captains_hat": "CAPTAInzparkls",
+  "tooltip.item.partnership.captains_hat": "weared by teh captain, k",
 
-  "block.partnership.sailors_hat": "saILORZ HAtz",
-  "tooltip.block.partnership.sailors_hat": "Worn by the crew.",
+  "item.partnership.sailors_hat": "saILORZ HAtz",
+  "tooltip.item.partnership.sailors_hat": "Worn by the crew.",
+
+  "block.partnership.marine_cannon": "marine cannon",
+  "tooltip.block.partnership.marine_cannon": "can be configURD AN fird frum  gived angl?? sinkz shiPz emmediatele win hITED??\n muS bE loADD wif  cannoNBEl an up to thre gunpowdr AN thin startd wif  reDSTONe signel??",
 
   "item.partnership.kayak": "KaYAAk",
   "tooltip.item.partnership.kayak": "A bit bigr thAn ur usual brrAt, but it gotz room fur up to 3 frinds!",
@@ -22,8 +25,18 @@
   "item.partnership.canvas_roll": "canvaz rOL",
   "item.partnership.plank": "plank",
 
+  "item.partnership.cannonball": "camonBel",
+
   "tooltip.partnership.holdShiftForMore": "huld [%s] fr moar deetailz K",
   "key.keyboard.shift": "shif",
+
+  "menu.partnership.marine_cannon.rotate": "clik an drag to rOTMicate TEH CANNON",
+  "menu.partnership.marine_cannon.escape": "escape uwU",
+
+  "entity.partnership.kayak": "KaYAAk",
+  "entity.partnership.cannonball": "camonBel",
+
+  "emi.category.partnership.boatyard": "Shipyardy indyustry",
 
   "itemGroup.partnership": "Partnership Mod"
 }

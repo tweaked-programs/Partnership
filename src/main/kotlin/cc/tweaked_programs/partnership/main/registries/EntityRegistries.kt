@@ -1,6 +1,7 @@
 package cc.tweaked_programs.partnership.main.registries
 
 import cc.tweaked_programs.partnership.main.MOD_ID
+import cc.tweaked_programs.partnership.main.entity.CannonballEntity
 import cc.tweaked_programs.partnership.main.entity.Kayak
 import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
 import net.minecraft.core.Registry
@@ -9,6 +10,7 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.entity.EntityType
+import net.minecraft.world.entity.EntityType.EntityFactory
 import net.minecraft.world.entity.MobCategory
 
 object EntityRegistries {
@@ -24,6 +26,15 @@ object EntityRegistries {
         name = "kayak",
         type = FabricEntityTypeBuilder.create(MobCategory.MISC, ::Kayak)
             .dimensions(EntityDimensions(1.6F, 0.6F, false))
+            .build()
+    )
+
+    val CANNONBALL: EntityType<CannonballEntity> = create(
+        name = "cannonball",
+        type = FabricEntityTypeBuilder.create(MobCategory.MISC, ::CannonballEntity)
+            .dimensions(EntityDimensions.fixed(0.25f, 0.25f))
+            .trackRangeBlocks(4)
+            .trackedUpdateRate(10)
             .build()
     )
 }

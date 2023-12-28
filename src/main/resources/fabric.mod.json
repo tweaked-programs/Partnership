@@ -27,11 +27,8 @@
 				"adapter": "kotlin"
 			}
 		],
-		"fabric-datagen": [
-			{
-				"value": "cc.tweaked_programs.partnership.main.PartnershipDataGenerator",
-				"adapter": "kotlin"
-			}
+		"emi": [
+			"cc.tweaked_programs.partnership.client.compat.emi.PartnershipEmi"
 		]
 	},
 	"mixins": [

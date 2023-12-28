@@ -1,4 +1,4 @@
-package cc.tweaked_programs.partnership.main.menu
+package cc.tweaked_programs.partnership.main.menu.inventory
 
 import net.minecraft.world.Container
 import net.minecraft.world.entity.player.Player
