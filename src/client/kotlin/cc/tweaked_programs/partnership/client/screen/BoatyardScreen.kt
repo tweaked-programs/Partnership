@@ -49,9 +49,4 @@ class BoatyardScreen(
         guiGraphics.drawString(font, title, titleLabelX, titleLabelY, 0xBFBFBF, false)
         guiGraphics.drawString(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, 0x404040, false)
     }
-
-    override fun render(guiGraphics: GuiGraphics, mouseX: Int, mouseY: Int, delta: Float) {
-        renderBackground(guiGraphics, mouseX, mouseY, delta)
-        super.render(guiGraphics, mouseX, mouseY, delta)
-    }
 }

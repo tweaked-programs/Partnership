@@ -30,7 +30,7 @@ import net.minecraft.world.phys.shapes.VoxelShape
 
 class MarineCannonBlock(properties: Properties) : BaseEntityBlock(properties), EntityBlock {
 
-    override fun codec(): MapCodec<out BaseEntityBlock> = TODO("No thank you")
+    override fun codec(): MapCodec<out BaseEntityBlock> = throw NotImplementedError("Normally not required in 1.20.4")
 
     init {
         registerDefaultState(stateDefinition.any()
@@ -41,8 +41,8 @@ class MarineCannonBlock(properties: Properties) : BaseEntityBlock(properties), E
     override fun newBlockEntity(blockPos: BlockPos, blockState: BlockState): BlockEntity = MarineCannonBlockEntity(blockPos, blockState)
 
     override fun <T : BlockEntity> getTicker(level: Level, blockState: BlockState, blockEntityType: BlockEntityType<T>): BlockEntityTicker<T>?
-    = if (level.isClientSide || blockEntityType != BlockEntityRegistries.MARINE_CANNON) null else BlockEntityTicker { level, blockPos, blockState, be: T ->
-        MarineCannonBlockEntity.tick(level, blockPos, blockState, be as MarineCannonBlockEntity)
+    = if (level.isClientSide || blockEntityType != BlockEntityRegistries.MARINE_CANNON) null else BlockEntityTicker { requiredLevel, blockPos, requiredBlockState, be: T ->
+        MarineCannonBlockEntity.tick(requiredLevel, blockPos, requiredBlockState, be as MarineCannonBlockEntity)
     }
 
     @Suppress("OVERRIDE_DEPRECATION")
@@ -130,7 +130,7 @@ class MarineCannonBlock(properties: Properties) : BaseEntityBlock(properties), E
     override fun getStateForPlacement(ctx: BlockPlaceContext): BlockState? = defaultBlockState()
         .setValue(BlockStateProperties.HORIZONTAL_FACING, if (ctx.player?.isCrouching == true) ctx.horizontalDirection.opposite else ctx.horizontalDirection)
 
-    @Suppress("OVERRIDE_DEPRECATION", "DEPRECATION")
+    @Suppress("OVERRIDE_DEPRECATION")
     override fun triggerEvent(blockState: BlockState, level: Level, blockPos: BlockPos, i: Int, j: Int): Boolean {
         super.triggerEvent(blockState, level, blockPos, i, j)
         val blockEntity = level.getBlockEntity(blockPos) ?: return false

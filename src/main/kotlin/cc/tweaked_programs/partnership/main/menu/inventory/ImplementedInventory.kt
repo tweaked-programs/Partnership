@@ -50,18 +50,49 @@ interface ImplementedInventory : Container {
     override fun stillValid(player: Player): Boolean = true
 
     companion object {
-        fun addPlayerInventory(player: Inventory, yoffset: Int = 0, addSlot: (Slot) -> Slot) {
+        fun addPlayerInventory(player: Inventory, yOffset: Int = 0, addSlot: (Slot) -> Slot) {
             repeat(3) { column ->
                 repeat(9) { row ->
-                    addSlot.invoke(Slot(player, row + column * 9 + 9, 8 + row * 18, 86 + column * 18 + yoffset))
+                    addSlot.invoke(Slot(player, row + column * 9 + 9, 8 + row * 18, 86 + column * 18 + yOffset))
                 }
             }
         }
 
-        fun addPlayerHotbar(player: Inventory, yoffset: Int = 0, addSlot: (Slot) -> Slot) {
+        fun addPlayerHotbar(player: Inventory, yOffset: Int = 0, addSlot: (Slot) -> Slot) {
             repeat(9) { row ->
-                addSlot.invoke(Slot(player, row, 8 + row * 18, 144 + yoffset))
+                addSlot.invoke(Slot(player, row, 8 + row * 18, 144 + yOffset))
             }
+        }
+
+        fun stackNewItemStackTo(destination: Inventory, item: ItemStack): ItemStack {
+            var remaining = item
+
+            while (!remaining.isEmpty) {
+                var slot = destination.getSlotWithRemainingSpace(remaining)
+
+                if (slot == -1) {
+                    slot = destination.freeSlot
+                    if (slot == -1)
+                        return remaining
+                }
+
+                if (destination.items[slot].isEmpty) {
+                    destination.add(slot, ItemStack(remaining.item))
+                    destination.items[slot].count = 0
+                }
+
+                if (remaining.count + destination.items[slot].count > 64) {
+                    // Fill slot, get remaining
+                    destination.items[slot].count = 64
+                    remaining.count = 64 - (remaining.count + destination.items[slot].count)
+                } else {
+                    // Put rest in it
+                    destination.items[slot].count += remaining.count
+                    remaining = ItemStack.EMPTY
+                }
+            }
+
+            return ItemStack.EMPTY
         }
     }
 }

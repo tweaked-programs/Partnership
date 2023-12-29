@@ -6,11 +6,13 @@ import cc.tweaked_programs.partnership.main.menu.inventory.ImplementedInventory
 import cc.tweaked_programs.partnership.main.recipe.BoatyardRecipe
 import cc.tweaked_programs.partnership.main.registries.BlockEntityRegistries.BOATYARD
 import net.minecraft.core.BlockPos
+import net.minecraft.core.Direction
 import net.minecraft.core.NonNullList
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.chat.Component
 import net.minecraft.world.ContainerHelper
 import net.minecraft.world.MenuProvider
+import net.minecraft.world.WorldlyContainer
 import net.minecraft.world.entity.player.Inventory
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.entity.player.StackedContents
@@ -21,10 +23,8 @@ import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.properties.BlockStateProperties
 
-// TODO("Make sides locked for item pulling from last slot")
-// TODO("Some mouse shortcuts dont work properly")
 class BoatyardBlockEntity(val pos: BlockPos, val state: BlockState) : BlockEntity(BOATYARD, pos, state),
-    MenuProvider, ImplementedInventory, CraftingContainer {
+    MenuProvider, ImplementedInventory, CraftingContainer, WorldlyContainer {
 
     val isDummy: Boolean = state.getValue(BlockStateProperties.EXTENDED)
     override val inventory: NonNullList<ItemStack> = NonNullList.withSize(INV_SIZE, ItemStack.EMPTY)
@@ -58,6 +58,12 @@ class BoatyardBlockEntity(val pos: BlockPos, val state: BlockState) : BlockEntit
         updateRecipeOutput(false)
         return output
     }
+
+    override fun getSlotsForFace(direction: Direction): IntArray = IntArray(INV_SIZE-1).mapIndexed { index, _ -> index }.toIntArray()
+
+    override fun canPlaceItemThroughFace(i: Int, itemStack: ItemStack, direction: Direction?): Boolean = false
+
+    override fun canTakeItemThroughFace(i: Int, itemStack: ItemStack, direction: Direction): Boolean = false
 
     fun updateRecipeOutput(remove: Boolean = true) {
         if (!hasLevel() || level!!.isClientSide)

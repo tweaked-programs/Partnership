@@ -27,43 +27,64 @@ class BoatyardMenu(
 
         repeat (3) { column ->
             repeat (4) { row ->
-                addSlot(GenericListenerSlot(inventory, row + column * 4, 8 + row * 18, 14 + column * 18) {
+                val index = row + column * 4
+                addSlot(GenericListenerSlot(inventory, index, 8+row*18, 14+column*18) {
                     updateRecipeOutput()
                 })
             }
         }
 
-        addSlot(GenericOutputOnlySlot(player.player, inventory, INV_SIZE-1, 13 + 6 * 18, 15 + 1 * 18))
+        addSlot(GenericOutputOnlySlot(inventory, RESULT_SLOT, 13+6*18, 15+1*18))
 
-        ImplementedInventory.addPlayerInventory(player = player, yoffset = 3) { slot -> addSlot(slot) }
-        ImplementedInventory.addPlayerHotbar(player = player, yoffset = 3) { slot -> addSlot(slot) }
+        ImplementedInventory.addPlayerInventory(player = player, yOffset = 3) { slot -> addSlot(slot) }
+        ImplementedInventory.addPlayerHotbar(player = player, yOffset = 3) { slot -> addSlot(slot) }
 
         updateRecipeOutput()
     }
 
-    override fun quickMoveStack(player: Player, i: Int): ItemStack? {
+    override fun quickMoveStack(player: Player, i: Int): ItemStack {
         val slot = slots[i]
-        if (!slot.hasItem()) return ItemStack.EMPTY
 
-        val itemStack2 = slot.item.copy()
-
-        val targetStart = if (i < INV_SIZE-1) INV_SIZE-1 else 0
-        val targetEnd = if (i < INV_SIZE-1) 49 else INV_SIZE-1
-
-        if (!moveItemStackTo(itemStack2, targetStart, targetEnd, i < INV_SIZE-1))
+        if (!slot.hasItem())
             return ItemStack.EMPTY
 
-        if (itemStack2.isEmpty)
-            slot.set(ItemStack.EMPTY)
-        else slot.setChanged()
+        if (i == RESULT_SLOT) {
+            // craft as much as we can. This code is slow and ugly as hell, but I don't really have time to make this properly.
+            while (slots[RESULT_SLOT].hasItem()) {
+                val before = slots[RESULT_SLOT].item.count
+                val remaining = ImplementedInventory.stackNewItemStackTo(player.inventory, slots[RESULT_SLOT].item.copy())
+                slots[RESULT_SLOT].set(remaining)
+                if (before == remaining.count)
+                    break
 
-        if (itemStack2.count == itemStack2.count)
-            return ItemStack.EMPTY
+                removeCraftingGridOnce()
+                updateRecipeOutput()
+            }
+        } else if (CRAFTING_SLOTS.contains(i)) {
+            // From container to player
+            val remaining = ImplementedInventory.stackNewItemStackTo(player.inventory, slots[i].item.copy())
+            slots[i].set(remaining)
+        } else if (i > RESULT_SLOT) {
+            // from player to container
+            for (it in 0..<RESULT_SLOT) {
+                if (slots[it].hasItem()) {
+                    if (slots[it].item.equals(slot.item.item))
+                        if ((slots[it].item.count + slot.item.count) <= 64) {
+                            slots[it].item.count += slot.item.count
+                            break
+                        } else {
+                            slot.item.count = 64 - (slots[it].item.count+slot.item.count)
+                            slots[it].item.count = 64
+                        }
+                } else if (inventory is BoatyardBlockEntity) {
+                    inventory.setItem(it, slot.item.copy())
+                    break
+                }
+            }
+            slots[i].set(ItemStack.EMPTY)
+        } else return ItemStack.EMPTY
 
-        slot.onTake(player, itemStack2)
-
-        updateRecipeOutput()
-        return itemStack2
+        return ItemStack.EMPTY
     }
 
     override fun stillValid(player: Player): Boolean = inventory.stillValid(player)
@@ -79,5 +100,17 @@ class BoatyardMenu(
             return
 
         inventory.updateRecipeOutput()
+    }
+
+    private fun removeCraftingGridOnce() {
+        if (player.player !is ServerPlayer || inventory !is BoatyardBlockEntity)
+            return
+
+        inventory.removeItem(RESULT_SLOT, 1)
+    }
+    
+    companion object {
+        const val RESULT_SLOT = INV_SIZE-1
+        val CRAFTING_SLOTS = 0..<RESULT_SLOT
     }
 }

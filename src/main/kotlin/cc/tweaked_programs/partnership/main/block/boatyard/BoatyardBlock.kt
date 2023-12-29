@@ -72,7 +72,7 @@ class BoatyardBlock(properties: Properties) : HorizontalDirectionalBlock(propert
         super.onRemove(blockState, level, blockPos, newBlockState, moved)
     }
 
-    override fun codec(): MapCodec<out HorizontalDirectionalBlock> = TODO("Only required in future versions. Well, normally...")
+    override fun codec(): MapCodec<out HorizontalDirectionalBlock> = throw NotImplementedError("Normally not required in 1.20.4")
 
     override fun createBlockStateDefinition(builder: StateDefinition.Builder<Block, BlockState>) { builder
         .add(BlockStateProperties.HORIZONTAL_FACING)
