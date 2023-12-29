@@ -3,17 +3,28 @@
 	"id": "partnership",
 	"version": "${version}",
 	"name": "Partnership",
-	"description": "Drive ships with partners.",
+	"description": "§7Drive ships with partners.\nAdditions such as larger §oor smaller§r boats, cannons, hats and other accessories or building blocks! §lIdeal for anyone who likes it close to the water!§r\nThis has been made for §9ModFest 1.20§r§7! Check it out! §o(Linked down below)§r\n§f§nCopyright © 2024 Sammy L. Koch§r§7",
 	"authors": [
 		"Sammy L. Koch"
 	],
 	"contact": {
 		"homepage": "https://tweaked-programs.cc/",
-		"sources": "https://github.com/tweaked-programs/"
+		"sources": "https://github.com/tweaked-programs/Partnership/",
+		"issues": "https://github.com/tweaked-programs/Partnership/issues/"
 	},
 	"license": "MIT",
 	"icon": "assets/partnership/icon.png",
 	"environment": "*",
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.partnership.modfest": "https://modfest.net/1.20/",
+				"modmenu.partnership.kofi": "https://ko-fi.com/sammykoch/",
+				"modmenu.partnership.modrinth": "https://modrinth.com/mod/partnership/"
+			},
+			"update_checker": true
+		}
+	},
 	"entrypoints": {
 		"client": [
 			{
@@ -28,7 +39,16 @@
 			}
 		],
 		"emi": [
-			"cc.tweaked_programs.partnership.client.compat.emi.PartnershipEmi"
+			{
+				"value": "cc.tweaked_programs.partnership.client.compat.emi.PartnershipEmi",
+				"adapter": "kotlin"
+			}
+		],
+		"modmenu": [
+			{
+				"value": "cc.tweaked_programs.partnership.client.compat.modmenu.PartnershipModmenu",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [
@@ -46,6 +66,7 @@
 		"fabric-language-kotlin": ">=1.9.21"
 	},
 	"recommends": {
-		"modmenu": ">=${modmenu_version}"
+		"modmenu": "~${modmenu_version}",
+		"emi": "~${emi_version}"
 	}
 }

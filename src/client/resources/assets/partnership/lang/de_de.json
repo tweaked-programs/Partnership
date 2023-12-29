@@ -38,5 +38,10 @@
 
   "emi.category.partnership.boatyard": "Werftindustrie",
 
-  "itemGroup.partnership": "Partnership Mod"
+  "itemGroup.partnership": "Partnership Mod",
+
+  "modmenu.partnership.modfest": "ModFest 1.20",
+  "modmenu.partnership.kofi": "Ko-fi",
+  "modmenu.partnership.modrinth": "Modrinth",
+  "modmenu.descriptionTranslation.partnership": "§7Fahre Schiffe mit deinen Partnern.\nFügt größere §ooder kleinere§r Schiffe hinzu, Kannonen, Hüte und weiteres Zubehör sowie Bauelemente! §lIdeal für jede Person, die es nah am Wasser mag!§r\nDies wurde für das §9ModFest 1.20§r§7 entwickelt. §o(Siehe Link im Anhang)§r\n§f§nCopyright © 2024 Sammy L. Koch§r§7"
 }

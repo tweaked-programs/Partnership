@@ -38,5 +38,9 @@
 
   "emi.category.partnership.boatyard": "Shipwright's treasures",
 
-  "itemGroup.partnership": "Partnership Mod"
+  "itemGroup.partnership": "Partnership Mod",
+
+  "modmenu.partnership.modfest": "ModFest 1.20",
+  "modmenu.partnership.kofi": "Ko-fi",
+  "modmenu.partnership.modrinth": "Modrinth"
 }

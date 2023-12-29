@@ -39,5 +39,10 @@
 
   "emi.category.partnership.boatyard": "Shipyard industry",
 
-  "itemGroup.partnership": "Partnership Mod"
+  "itemGroup.partnership": "Partnership Mod",
+
+  "modmenu.partnership.modfest": "ModFest 1.20",
+  "modmenu.partnership.kofi": "Ko-fi",
+  "modmenu.partnership.modrinth": "Modrinth",
+  "modmenu.descriptionTranslation.partnership": "§7Drive ships with partners.\nAdditions such as larger §oor smaller§r boats, cannons, hats and other accessories or building blocks! §lIdeal for anyone who likes it close to the water!§r\nThis has been made for §9ModFest 1.20§r§7! Check it out! §o(Linked down below)§r\n§f§nCopyright © 2024 Sammy L. Koch§r§7"
 }

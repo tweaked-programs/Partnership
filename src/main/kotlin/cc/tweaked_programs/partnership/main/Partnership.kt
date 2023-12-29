@@ -32,6 +32,7 @@ TODO
 	[-] Redo textures but good this time
 	[ ] Add recipes
 	[x] Sort Item Group and secondary groups for items
+	[ ] Remove normal boat recipe
 */
 
 const val MOD_ID = "partnership"
