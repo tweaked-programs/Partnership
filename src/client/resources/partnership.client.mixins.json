@@ -3,7 +3,7 @@
 	"package": "cc.tweaked_programs.partnership.client.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"MixinAdvancedBlockItem"
+      "AdvancedBlockItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

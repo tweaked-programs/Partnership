@@ -2,6 +2,7 @@ package cc.tweaked_programs.partnership.client.model.marine_cannon
 
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.block.cannon.MarineCannonBlockEntity
+import cc.tweaked_programs.partnership.main.block.cannon.MarineCannonBlockEntity.Companion.COUNTDOWN
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
 import net.minecraft.client.model.Model
@@ -29,7 +30,7 @@ class MarineCannonPipeModel(root: ModelPart) :
         val rotation = (entity.state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + entity.getXRot()) * MAGIKK
         pipe.setRotation(entity.getYRot() * MAGIKK, rotation, 0F)
         string.visible = entity.isShooting()
-        string.z = -3.01F+entity.getTimeLeft()
+        string.z = -2.01F+((3F/COUNTDOWN*(entity.getTimeLeft().toFloat())).toInt())
     }
 
     override fun renderToBuffer(poseStack: PoseStack, vertexConsumer: VertexConsumer, packedLight: Int,

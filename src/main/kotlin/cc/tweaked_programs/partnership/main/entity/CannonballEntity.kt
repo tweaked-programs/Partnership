@@ -9,7 +9,6 @@ import net.minecraft.sounds.SoundEvents
 import net.minecraft.sounds.SoundSource
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.LivingEntity
-import net.minecraft.world.entity.projectile.Snowball
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile
 import net.minecraft.world.entity.vehicle.Boat
 import net.minecraft.world.item.Item

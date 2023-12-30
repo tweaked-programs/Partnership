@@ -27,8 +27,7 @@ class SailorsHatModel(val root: ModelPart) : Model(Function { resourceLocation: 
 
     fun setupAnim(humanoidModel: HumanoidModel<LivingEntity>) {
         root.setRotation(humanoidModel.hat.xRot, humanoidModel.hat.yRot, humanoidModel.hat.zRot)
-        root.x = -0.65F
-        root.y = 0.5F
+        root.y = -1.0F
     }
 
     companion object {

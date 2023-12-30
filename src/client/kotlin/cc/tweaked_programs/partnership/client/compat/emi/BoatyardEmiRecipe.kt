@@ -1,9 +1,6 @@
 package cc.tweaked_programs.partnership.client.compat.emi
 
 import cc.tweaked_programs.partnership.main.MOD_ID
-import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlockEntity
-import cc.tweaked_programs.partnership.main.menu.inventory.GenericListenerSlot
-import cc.tweaked_programs.partnership.main.menu.inventory.GenericOutputOnlySlot
 import cc.tweaked_programs.partnership.main.recipe.BoatyardRecipe
 import dev.emi.emi.api.recipe.EmiRecipe
 import dev.emi.emi.api.recipe.EmiRecipeCategory

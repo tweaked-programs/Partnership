@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory
 [x] = Finished
 
 TODO
-	[x] Finish Boatyard block								POLISHING
+	[x] Finish Boatyard block
 		[x] Make block
 		[x] Add block entity
 		[x] Make an interface for it
@@ -19,6 +19,8 @@ TODO
 	[-] Make first custom boat (!!!)
 		[-] Add variants									POLISHING
 			[x] Kayak
+			[ ] Paper ship
+			[ ] Lifebuoy
 	[x] Add decorative stuff
 		[x] Metal scaffolding
 		[x] Marker buoys for borders on sea					POLISHING

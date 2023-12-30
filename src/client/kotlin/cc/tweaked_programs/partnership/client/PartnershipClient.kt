@@ -12,9 +12,9 @@ import cc.tweaked_programs.partnership.main.registries.EntityRegistries.KAYAK
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
+import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry
-import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers
 import net.minecraft.client.renderer.entity.EntityRendererProvider

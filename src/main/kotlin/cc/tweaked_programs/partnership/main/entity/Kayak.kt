@@ -2,6 +2,7 @@ package cc.tweaked_programs.partnership.main.entity
 
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
+import net.minecraft.util.Mth
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.entity.EntityType
@@ -16,6 +17,36 @@ class Kayak(type: EntityType<out Boat>, level: Level) : Boat(type, level) {
     constructor(level: Level, x: Double, y: Double, z: Double) : this(EntityRegistries.KAYAK, level) {
         setPos(x, y, z)
         xo = x; yo = y; zo = z
+    }
+
+    override fun controlBoat() {
+        if (!isVehicle) {
+            return
+        }
+        var f = 0.0f
+        if (inputLeft)
+            deltaRotation -= .5F
+        if (inputRight)
+            deltaRotation += .5F
+        if (inputRight != inputLeft && !inputUp && !inputDown)
+            f += 0.005f
+
+        yRot = yRot + deltaRotation
+
+        if (inputUp)
+            f += 0.05f
+        if (inputDown)
+            f -= 0.01f
+
+        deltaMovement = deltaMovement.add(
+            (Mth.sin(-yRot * (Math.PI.toFloat() / 180)) * f).toDouble(),
+            0.0,
+            (Mth.cos(yRot * (Math.PI.toFloat() / 180)) * f).toDouble()
+        )
+        setPaddleState(
+            inputRight && !inputLeft || inputUp,
+            inputLeft && !inputRight || inputUp
+        )
     }
 
     override fun getDropItem(): Item {

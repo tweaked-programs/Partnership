@@ -12,9 +12,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(Player.class)
-public abstract class PlayerNoSweepingEdgeWithPaddle extends LivingEntity {
+public abstract class PlayerNoSweepingEdgeWithPaddleMixin extends LivingEntity {
 
-    protected PlayerNoSweepingEdgeWithPaddle(EntityType<? extends LivingEntity> entityType, Level level) {
+    protected PlayerNoSweepingEdgeWithPaddleMixin(EntityType<? extends LivingEntity> entityType, Level level) {
         super(entityType, level);
     }
 

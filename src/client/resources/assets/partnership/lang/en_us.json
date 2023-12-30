@@ -21,7 +21,7 @@
   "tooltip.item.partnership.kayak": "Slightly larger than a normal boat, but it has room for up to three passengers.",
 
   "item.partnership.paddle": "Paddle",
-  "tooltip.item.partnership.paddle": "Has +1 knockback enchantment as a base.",
+  "tooltip.item.partnership.paddle": "Has +1 knockback by default.",
 
   "item.partnership.canvas_roll": "Canvas Roll",
   "item.partnership.plank": "Plank",

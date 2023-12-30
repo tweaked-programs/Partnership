@@ -1,0 +1,9 @@
+accessWidener v2 named
+
+accessible  field   net/minecraft/world/entity/vehicle/Boat inputLeft       Z
+accessible  field   net/minecraft/world/entity/vehicle/Boat inputRight      Z
+accessible  field   net/minecraft/world/entity/vehicle/Boat inputUp         Z
+accessible  field   net/minecraft/world/entity/vehicle/Boat inputDown       Z
+accessible  field   net/minecraft/world/entity/vehicle/Boat deltaRotation   F
+
+extendable  method  net/minecraft/world/entity/vehicle/Boat controlBoat     ()V

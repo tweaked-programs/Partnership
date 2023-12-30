@@ -58,6 +58,8 @@ processResources {
 loom {
 	splitEnvironmentSourceSets()
 
+	accessWidenerPath = file("src/main/resources/partnership.accesswidener")
+
 	mods {
 		"partnership" {
 			sourceSet sourceSets.main
