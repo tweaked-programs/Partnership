@@ -90,13 +90,13 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [-74.05, 90, 79],
-			"translation": [0, 0.75, 1.25],
+			"rotation": [-135, -0.7, 180],
+			"translation": [0, -1, 1],
 			"scale": [0.8, 0.8, 0.8]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [-74.05, 90, 79],
-			"translation": [0, 0.75, 1.25],
+			"rotation": [-135, -0.7, 180],
+			"translation": [0, -1, 1],
 			"scale": [0.8, 0.8, 0.8]
 		},
 		"firstperson_righthand": {

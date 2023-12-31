@@ -1,9 +1,0 @@
-{
-  "type": "partnership:boatyard_construct_serializer",
-  "ingredients": [
-    {"id": "minecraft:dirt", "Count": 2}, {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1},
-    {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1},
-    {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1}, {"id": "minecraft:dirt", "Count": 1}
-  ],
-  "output": {"id": "partnership:kayak", "Count": 1}
-}

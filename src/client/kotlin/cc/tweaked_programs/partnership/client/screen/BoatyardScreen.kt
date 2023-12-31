@@ -1,6 +1,5 @@
 package cc.tweaked_programs.partnership.client.screen
 
-import cc.tweaked_programs.partnership.main.BRAND_COLOR
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.item.extendable.GenericBoatItem
 import cc.tweaked_programs.partnership.main.menu.BoatyardMenu
@@ -13,7 +12,6 @@ import net.minecraft.network.chat.MutableComponent
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.player.Inventory
 
-// TODO("Add helpful infos to 'note'")
 class BoatyardScreen(
     menu: BoatyardMenu,
     inventory: Inventory,

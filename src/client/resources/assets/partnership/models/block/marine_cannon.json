@@ -1,4 +1,6 @@
 {
-	"textures": {},
+	"textures": {
+		"particle": "partnership:entity/marine_cannon/pipe"
+	},
 	"elements": []
 }

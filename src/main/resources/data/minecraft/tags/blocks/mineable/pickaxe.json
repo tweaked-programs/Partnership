@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "partnership:boatyard",
-    "partnership:metal_scaffolding"
+    "partnership:metal_scaffolding",
+    "partnership:marine_cannon"
   ]
 }

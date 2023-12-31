@@ -7,6 +7,9 @@
   "block.partnership.buoy": "Boje",
   "tooltip.block.partnership.buoy": "Zum Markieren von Grenzen oder Besonderheiten auf dem Gewässer.",
 
+  "block.partnership.chain_buoy": "Kettenboje",
+  "tooltip.block.partnership.chain_buoy": "Geeignet zur Markierung von Grenzen auf dem Wasser zwischen Bojen.",
+
   "item.partnership.captains_hat": "Kapitänsmütze",
   "tooltip.item.partnership.captains_hat": "Wird vom Kapitän persönlich getragen.",
 
@@ -20,7 +23,10 @@
   "tooltip.item.partnership.kayak": "Etwas größer als ein herkömmliches Boot, bietet jedoch genug Platz für bis zu drei Passagiere.",
 
   "item.partnership.lifebuoy": "Rettungsring",
-  "tooltip.item.partnership.lifebuoy": "Wirf es jemandem in Not zu!",
+  "tooltip.item.partnership.lifebuoy": "Wirf es jemandem in Not zu! Kann nur einen Passagier halten. Wird hauptsächlich mit der Maus navigiert.",
+
+  "item.partnership.sailboat": "Segelfloß",
+  "tooltip.item.partnership.sailboat": "Schneller als übliche Boote aufgrund des Segels.",
 
   "item.partnership.paddle": "Paddel",
   "tooltip.item.partnership.paddle": "Hat +1 Rückstoß als Basis.",
@@ -37,6 +43,8 @@
   "menu.partnership.marine_cannon.escape": "Drücke [ESC] zum aufhören",
 
   "entity.partnership.kayak": "Kajak",
+  "entity.partnership.lifebuoy": "Rettungsring",
+  "entity.partnership.sailboat": "Segelfloß",
   "entity.partnership.cannonball": "Kanonenkugel",
 
   "emi.category.partnership.boatyard": "Werftindustrie",

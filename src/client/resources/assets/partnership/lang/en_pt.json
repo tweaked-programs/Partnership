@@ -7,6 +7,9 @@
   "block.partnership.buoy": "Sea Markers",
   "tooltip.block.partnership.buoy": "For markin' the bounds or peculiarities on the mighty seas.",
 
+  "block.partnership.chain_buoy": "Anchor Matey",
+  "tooltip.block.partnership.chain_buoy": "Deployed to mark the boundaries betwixt buoys at sea.",
+
   "item.partnership.captains_hat": "Crown o' the Ship",
   "tooltip.item.partnership.captains_hat": "Worn by the Cap'n himself, aye!",
 
@@ -19,8 +22,11 @@
   "item.partnership.kayak": "Kayak",
   "tooltip.item.partnership.kayak": "A tad bigger than yer average vessel, but she's got space for a crew of three hearty shipmates!",
 
-  "item.partnership.lifebuoy": "Sparrow's Saver.",
+  "item.partnership.lifebuoy": "Sparrow's Saver",
   "tooltip.item.partnership.lifebuoy": "Hurl this to the scallywag in dire need!",
+
+  "item.partnership.sailboat": "Schooner",
+  "tooltip.item.partnership.sailboat": "Faster than a normal boat because of its sail.",
 
   "item.partnership.paddle": "Oar",
   "tooltip.item.partnership.paddle": "Be boastin' a +1 shove-away charm from the start",
@@ -37,6 +43,8 @@
   "menu.partnership.marine_cannon.escape": "Escape to escape!",
 
   "entity.partnership.kayak": "Kayak",
+  "entity.partnership.lifebuoy": "Sparrow's Saver",
+  "entity.partnership.sailboat": "Schooner",
   "entity.partnership.cannonball": "Matey Missile",
 
   "emi.category.partnership.boatyard": "Shipwright's treasures",

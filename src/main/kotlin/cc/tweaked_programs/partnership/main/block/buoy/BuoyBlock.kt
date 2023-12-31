@@ -1,4 +1,4 @@
-package cc.tweaked_programs.partnership.main.block
+package cc.tweaked_programs.partnership.main.block.buoy
 
 import com.mojang.serialization.MapCodec
 import net.minecraft.core.BlockPos
@@ -13,7 +13,7 @@ import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.Shapes
 import net.minecraft.world.phys.shapes.VoxelShape
 
-class BuoyBlock(properties: Properties) : BushBlock(properties) {
+open class BuoyBlock(properties: Properties) : BushBlock(properties) {
     override fun codec(): MapCodec<out BushBlock> = BlockBehaviour.simpleCodec(::BuoyBlock)
 
     override fun mayPlaceOn(blockState: BlockState, blockGetter: BlockGetter, blockPos: BlockPos): Boolean {
@@ -39,7 +39,7 @@ class BuoyBlock(properties: Properties) : BushBlock(properties) {
 
     override fun propagatesSkylightDown(blockState: BlockState, blockGetter: BlockGetter, blockPos: BlockPos): Boolean = true
 
-    @Suppress("OVERRIDE_DEPRECATION")
+    @Suppress("OVERRIDE_DEPRECATION", "DEPRECATION")
     override fun skipRendering(blockState: BlockState, blockState2: BlockState, direction: Direction): Boolean
         = if (blockState2.`is`(this)) true else super.skipRendering(blockState, blockState2, direction)
     

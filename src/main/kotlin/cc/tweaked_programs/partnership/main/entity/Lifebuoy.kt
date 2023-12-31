@@ -47,7 +47,7 @@ class Lifebuoy(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
     }
 
     override fun getPaddleSound(): SoundEvent? = when (status) {
-        Status.IN_WATER, Status.UNDER_WATER, Status.UNDER_FLOWING_WATER -> SoundEvents.PLAYER_SWIM
+        Status.IN_WATER, Status.UNDER_WATER, Status.UNDER_FLOWING_WATER -> SoundEvents.TURTLE_SWIM
         else -> null
     }
 }

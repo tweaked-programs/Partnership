@@ -15,10 +15,11 @@ class BoatyardEmiRecipe(recipe: BoatyardRecipe) : EmiRecipe {
 
     private val input: MutableList<EmiIngredient> = recipe.getIngredientsAsItemStacks().map { EmiStack.of(it) }.toMutableList()
     private val output: MutableList<EmiStack> = mutableListOf(EmiStack.of(recipe.getResultItem(RegistryAccess.EMPTY)))
+    private val id = recipe.getResultItem(RegistryAccess.EMPTY).item.asItem().descriptionId
 
     override fun getCategory(): EmiRecipeCategory = PartnershipEmi.BOATYARD_CATEGORY
 
-    override fun getId(): ResourceLocation = ResourceLocation(MOD_ID, "boatyard_construct_recipe")
+    override fun getId() = ResourceLocation(MOD_ID, id)
 
     override fun getInputs() = input
 

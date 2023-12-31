@@ -2,16 +2,19 @@ package cc.tweaked_programs.partnership.client
 
 import cc.tweaked_programs.partnership.client.model.entity.KayakModel
 import cc.tweaked_programs.partnership.client.model.entity.LifebuoyModel
+import cc.tweaked_programs.partnership.client.model.entity.SailboatModel
 import cc.tweaked_programs.partnership.client.registries.ScreenRegistries
 import cc.tweaked_programs.partnership.client.renderer.armor.HatRenderer
 import cc.tweaked_programs.partnership.client.renderer.blockentity.MarineCannonBlockEntityRenderer
 import cc.tweaked_programs.partnership.client.renderer.entity.KayakRenderer
 import cc.tweaked_programs.partnership.client.renderer.entity.LifebuoyRenderer
+import cc.tweaked_programs.partnership.client.renderer.entity.SailboatRenderer
 import cc.tweaked_programs.partnership.main.registries.BlockEntityRegistries
 import cc.tweaked_programs.partnership.main.registries.BlockRegistries
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries.CANNONBALL
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries.KAYAK
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries.LIFEBUOY
+import cc.tweaked_programs.partnership.main.registries.EntityRegistries.SAILBOAT
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
@@ -47,6 +50,9 @@ object PartnershipClient : ClientModInitializer {
 
 		EntityRendererRegistry.register(LIFEBUOY, ::LifebuoyRenderer)
 		EntityModelLayerRegistry.registerModelLayer(LifebuoyModel.LAYER_LOCATION, LifebuoyModel::createBodyLayer)
+
+		EntityRendererRegistry.register(SAILBOAT, ::SailboatRenderer)
+		EntityModelLayerRegistry.registerModelLayer(SailboatModel.LAYER_LOCATION, SailboatModel::createBodyLayer)
 
 		EntityRendererRegistry.register(CANNONBALL) { context: EntityRendererProvider.Context -> ThrownItemRenderer(context) }
 	}

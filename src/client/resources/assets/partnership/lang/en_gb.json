@@ -7,6 +7,9 @@
   "block.partnership.buoy": "Buoy",
   "tooltip.block.partnership.buoy": "Used to mark borders or highlights on water.",
 
+  "block.partnership.chain_buoy": "Chain Buoy",
+  "tooltip.block.partnership.chain_buoy": "Used to make the borders between Buoys on water.",
+
   "item.partnership.captains_hat": "Captain's Hat",
   "tooltip.item.partnership.captains_hat": "Worn by the captain themself.",
 
@@ -21,6 +24,9 @@
 
   "item.partnership.lifebuoy": "Lifebuoy",
   "tooltip.item.partnership.lifebuoy": "Throw this to whoever needs it!",
+
+  "item.partnership.sailboat": "Sailboat",
+  "tooltip.item.partnership.sailboat": "Faster than a normal boat because of its sail.",
 
   "item.partnership.paddle": "Paddle",
   "tooltip.item.partnership.paddle": "Has +1 knockback by default.",
@@ -37,6 +43,8 @@
   "menu.partnership.marine_cannon.escape": "Press [ESC] to stop",
 
   "entity.partnership.kayak": "Kayak",
+  "entity.partnership.lifebuoy": "Lifebuoy",
+  "entity.partnership.sailboat": "Sailboat",
   "entity.partnership.cannonball": "Cannonball",
 
   "emi.category.partnership.boatyard": "Shipyard industry",

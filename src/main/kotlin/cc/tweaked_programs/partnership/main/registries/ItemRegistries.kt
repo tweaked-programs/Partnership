@@ -3,6 +3,7 @@ package cc.tweaked_programs.partnership.main.registries
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.entity.Kayak
 import cc.tweaked_programs.partnership.main.entity.Lifebuoy
+import cc.tweaked_programs.partnership.main.entity.Sailboat
 import cc.tweaked_programs.partnership.main.item.BoatyardItem
 import cc.tweaked_programs.partnership.main.item.Hat
 import cc.tweaked_programs.partnership.main.item.PaddleItem
@@ -44,9 +45,11 @@ object ItemRegistries {
     val BOATYARD: BoatyardItem
     val KAYAK: GenericBoatItem
     val LIFEBUOY: GenericBoatItem
+    val SAILBOAT: GenericBoatItem
     val METAL_SCAFFOLDING: BlockItem
     val PADDLE: PaddleItem
     val BUOY: DescriptivePlaceOnWaterBlockItem
+    val CHAIN_BUOY: DescriptivePlaceOnWaterBlockItem
     val CAPTAINS_HAT: Hat
     val SAILORS_HAT: Hat
     val CANVAS_ROLL: Item
@@ -95,6 +98,26 @@ object ItemRegistries {
             }
         )
 
+        SAILBOAT = create(
+            name = "sailboat",
+            category = CreativeModeTabs.TOOLS_AND_UTILITIES,
+            categoryRegister = { content, item ->
+                content.addAfter(LIFEBUOY, item)
+            },
+            itemSupplier = { properties ->
+                properties.maxCount(1)
+                GenericBoatItem(
+                    properties = properties,
+                    boat = { level, x, y, z ->
+                        Sailboat(level, x, y, z)
+                    },
+                    speed = Sailboat.SPEED_RANK,
+                    mobility = Sailboat.MOBILITY_RANK,
+                    space = Sailboat.SPACE_RANK
+                )
+            }
+        )
+
         BOATYARD = create(
             name = "boatyard",
             category = CreativeModeTabs.FUNCTIONAL_BLOCKS,
@@ -128,6 +151,19 @@ object ItemRegistries {
             itemSupplier = { properties ->
                 DescriptivePlaceOnWaterBlockItem(
                     BlockRegistries.BUOY,
+                    properties.maxCount(64))
+            }
+        )
+
+        CHAIN_BUOY = create(
+            name = "chain_buoy",
+            category = CreativeModeTabs.BUILDING_BLOCKS,
+            categoryRegister = { content, item ->
+                content.addAfter(METAL_SCAFFOLDING, item)
+            },
+            itemSupplier = { properties ->
+                DescriptivePlaceOnWaterBlockItem(
+                    BlockRegistries.CHAIN_BUOY,
                     properties.maxCount(64))
             }
         )

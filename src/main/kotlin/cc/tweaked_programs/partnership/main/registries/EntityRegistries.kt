@@ -4,6 +4,7 @@ import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.entity.CannonballEntity
 import cc.tweaked_programs.partnership.main.entity.Kayak
 import cc.tweaked_programs.partnership.main.entity.Lifebuoy
+import cc.tweaked_programs.partnership.main.entity.Sailboat
 import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.BuiltInRegistries
@@ -33,6 +34,13 @@ object EntityRegistries {
         name = "lifebuoy",
         type = FabricEntityTypeBuilder.create(MobCategory.MISC, ::Lifebuoy)
             .dimensions(EntityDimensions(1.5F, 0.5F, false))
+            .build()
+    )
+
+    val SAILBOAT: EntityType<Sailboat> = create(
+        name = "sailboat",
+        type = FabricEntityTypeBuilder.create(MobCategory.MISC, ::Sailboat)
+            .dimensions(EntityDimensions(1.2F, 0.3F, false))
             .build()
     )
 
