@@ -1,5 +1,6 @@
 package cc.tweaked_programs.partnership.main.item
 
+import cc.tweaked_programs.partnership.main.item.extendable.AdvancedItemDescription
 import com.google.common.collect.ImmutableMultimap
 import com.google.common.collect.Multimap
 import net.minecraft.core.BlockPos

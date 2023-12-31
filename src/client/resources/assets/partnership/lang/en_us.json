@@ -20,6 +20,9 @@
   "item.partnership.kayak": "Kayak",
   "tooltip.item.partnership.kayak": "Slightly larger than a normal boat, but it has room for up to three passengers.",
 
+  "item.partnership.lifebuoy": "Lifebuoy",
+  "tooltip.item.partnership.lifebuoy": "Throw this to whoever needs it!",
+
   "item.partnership.paddle": "Paddle",
   "tooltip.item.partnership.paddle": "Has +1 knockback by default.",
 

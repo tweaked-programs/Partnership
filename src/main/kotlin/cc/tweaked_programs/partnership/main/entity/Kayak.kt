@@ -2,7 +2,6 @@ package cc.tweaked_programs.partnership.main.entity
 
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
-import net.minecraft.util.Mth
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.entity.EntityType
@@ -12,48 +11,29 @@ import net.minecraft.world.item.Item
 import net.minecraft.world.level.Level
 import org.joml.Vector3f
 
-class Kayak(type: EntityType<out Boat>, level: Level) : Boat(type, level) {
+class Kayak(type: EntityType<out Boat>, level: Level) : GenericBoat(type, level) {
+
+    override val maxSpeed: Float = .05f
+    override val backwardsSpeed: Float = .01f
+    override val rotationSpeed: Float =.5F
+    override val rotationBoostForGoodDrivers: Float = .008f
+
+    companion object {
+        const val SPEED_RANK: Int = 10
+        const val MOBILITY_RANK: Int = 10
+        const val SPACE_RANK: Int = 10
+    }
 
     constructor(level: Level, x: Double, y: Double, z: Double) : this(EntityRegistries.KAYAK, level) {
         setPos(x, y, z)
         xo = x; yo = y; zo = z
     }
 
-    override fun controlBoat() {
-        if (!isVehicle) {
-            return
-        }
-        var f = 0.0f
-        if (inputLeft)
-            deltaRotation -= .5F
-        if (inputRight)
-            deltaRotation += .5F
-        if (inputRight != inputLeft && !inputUp && !inputDown)
-            f += 0.005f
-
-        yRot = yRot + deltaRotation
-
-        if (inputUp)
-            f += 0.05f
-        if (inputDown)
-            f -= 0.01f
-
-        deltaMovement = deltaMovement.add(
-            (Mth.sin(-yRot * (Math.PI.toFloat() / 180)) * f).toDouble(),
-            0.0,
-            (Mth.cos(yRot * (Math.PI.toFloat() / 180)) * f).toDouble()
-        )
-        setPaddleState(
-            inputRight && !inputLeft || inputUp,
-            inputLeft && !inputRight || inputUp
-        )
-    }
-
-    override fun getDropItem(): Item {
-        return ItemRegistries.KAYAK
-    }
+    override fun getDropItem(): Item = ItemRegistries.KAYAK
 
     override fun getSinglePassengerXOffset(): Float = 0.6F
+
+    override fun getMaxPassengers(): Int = 3
 
     fun getPassengerZOffset(entity: Entity): Float {
         val index = passengers.indexOf(entity)
@@ -80,6 +60,4 @@ class Kayak(type: EntityType<out Boat>, level: Level) : Boat(type, level) {
 
     override fun getPassengerAttachmentPoint(entity: Entity, entityDimensions: EntityDimensions, f: Float): Vector3f
         = Vector3f(0.0f, entityDimensions.height / 2.5f, getPassengerZOffset(entity))
-
-    override fun getMaxPassengers(): Int = 3
 }

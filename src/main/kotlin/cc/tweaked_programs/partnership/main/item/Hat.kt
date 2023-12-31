@@ -1,5 +1,6 @@
 package cc.tweaked_programs.partnership.main.item
 
+import cc.tweaked_programs.partnership.main.item.extendable.AdvancedItemDescription
 import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResultHolder

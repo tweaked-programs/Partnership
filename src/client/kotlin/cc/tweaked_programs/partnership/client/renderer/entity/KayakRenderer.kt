@@ -1,6 +1,6 @@
 package cc.tweaked_programs.partnership.client.renderer.entity
 
-import cc.tweaked_programs.partnership.client.model.KayakModel
+import cc.tweaked_programs.partnership.client.model.entity.KayakModel
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.entity.Kayak
 import com.mojang.blaze3d.vertex.PoseStack

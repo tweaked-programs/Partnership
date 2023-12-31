@@ -1,5 +1,6 @@
-package cc.tweaked_programs.partnership.main.item
+package cc.tweaked_programs.partnership.main.item.extendable
 
+import cc.tweaked_programs.partnership.main.entity.GenericBoat
 import net.minecraft.network.chat.Component
 import net.minecraft.stats.Stats
 import net.minecraft.world.InteractionHand
@@ -16,11 +17,15 @@ import net.minecraft.world.level.ClipContext
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.gameevent.GameEvent
 import net.minecraft.world.phys.HitResult
+import kotlin.reflect.full.declaredFunctions
+import kotlin.reflect.jvm.reflect
 
 class GenericBoatItem (
     properties: Properties,
-    private val boat: (Level, Double, Double, Double) -> Boat
-) : BoatItem(false, Boat.Type.OAK, properties) {
+    val speed: Int,
+    val mobility: Int,
+    val space: Int,
+    private val boat: (Level, Double, Double, Double) -> GenericBoat) : BoatItem(false, Boat.Type.OAK, properties) {
 
     override fun appendHoverText(itemStack: ItemStack, level: Level?, list: MutableList<Component>, tooltipFlag: TooltipFlag)
         = AdvancedItemDescription.appendHoverText(descriptionId, true, list)

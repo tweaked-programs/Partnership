@@ -1,6 +1,7 @@
 package cc.tweaked_programs.partnership.main.block.boatyard
 
 import cc.tweaked_programs.partnership.main.Partnership.logger
+import cc.tweaked_programs.partnership.main.menu.BoatyardMenu
 import com.mojang.serialization.MapCodec
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
@@ -67,8 +68,10 @@ class BoatyardBlock(properties: Properties) : HorizontalDirectionalBlock(propert
 
         val blockEntity = level.getBlockEntity(blockPos)
 
-        if (blockEntity is BoatyardBlockEntity)
+        if (blockEntity is BoatyardBlockEntity) {
+            blockEntity.rawRemoveItem(BoatyardMenu.RESULT_SLOT, 64)
             Containers.dropContents(level, blockPos, blockEntity)
+        }
         super.onRemove(blockState, level, blockPos, newBlockState, moved)
     }
 

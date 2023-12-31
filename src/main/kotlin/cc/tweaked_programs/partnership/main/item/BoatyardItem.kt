@@ -1,6 +1,7 @@
 package cc.tweaked_programs.partnership.main.item
 
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlock
+import cc.tweaked_programs.partnership.main.item.extendable.AdvancedItemDescription
 import cc.tweaked_programs.partnership.main.registries.BlockRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionResult

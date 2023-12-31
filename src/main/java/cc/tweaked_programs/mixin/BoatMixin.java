@@ -10,8 +10,8 @@ import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(Boat.class)
-abstract public class BoatNotHurtByBowMixin extends VehicleEntity implements VariantHolder<Boat.Type> {
-    public BoatNotHurtByBowMixin(EntityType<?> entityType, Level level) {
+abstract public class BoatMixin extends VehicleEntity implements VariantHolder<Boat.Type> {
+    public BoatMixin(EntityType<?> entityType, Level level) {
         super(entityType, level);
     }
 

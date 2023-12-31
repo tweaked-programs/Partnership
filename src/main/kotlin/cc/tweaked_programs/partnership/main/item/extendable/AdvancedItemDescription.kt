@@ -1,4 +1,4 @@
-package cc.tweaked_programs.partnership.main.item
+package cc.tweaked_programs.partnership.main.item.extendable
 
 import cc.tweaked_programs.partnership.main.BRAND_COLOR
 import net.minecraft.network.chat.Component
@@ -40,7 +40,6 @@ object AdvancedItemDescription {
         }
     }
 
-    //TODO("Replace with ClientService class")
     private fun isHoldingShift(): Boolean {
         return false
     }

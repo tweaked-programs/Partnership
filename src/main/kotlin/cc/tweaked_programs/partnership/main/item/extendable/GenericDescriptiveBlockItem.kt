@@ -1,4 +1,4 @@
-package cc.tweaked_programs.partnership.main.item
+package cc.tweaked_programs.partnership.main.item.extendable
 
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.BlockItem

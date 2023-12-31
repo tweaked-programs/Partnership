@@ -2,7 +2,13 @@ package cc.tweaked_programs.partnership.main.registries
 
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.entity.Kayak
-import cc.tweaked_programs.partnership.main.item.*
+import cc.tweaked_programs.partnership.main.entity.Lifebuoy
+import cc.tweaked_programs.partnership.main.item.BoatyardItem
+import cc.tweaked_programs.partnership.main.item.Hat
+import cc.tweaked_programs.partnership.main.item.PaddleItem
+import cc.tweaked_programs.partnership.main.item.extendable.DescriptivePlaceOnWaterBlockItem
+import cc.tweaked_programs.partnership.main.item.extendable.GenericBoatItem
+import cc.tweaked_programs.partnership.main.item.extendable.GenericDescriptiveBlockItem
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
@@ -37,6 +43,7 @@ object ItemRegistries {
 
     val BOATYARD: BoatyardItem
     val KAYAK: GenericBoatItem
+    val LIFEBUOY: GenericBoatItem
     val METAL_SCAFFOLDING: BlockItem
     val PADDLE: PaddleItem
     val BUOY: DescriptivePlaceOnWaterBlockItem
@@ -56,9 +63,35 @@ object ItemRegistries {
             },
             itemSupplier = { properties ->
                 properties.maxCount(1)
-                GenericBoatItem(properties) { level, x, y, z ->
-                    Kayak(level, x, y, z)
-                }
+                GenericBoatItem(
+                    properties = properties,
+                    boat = { level, x, y, z ->
+                        Kayak(level, x, y, z)
+                    },
+                    speed = Kayak.SPEED_RANK,
+                    mobility = Kayak.MOBILITY_RANK,
+                    space = Kayak.SPACE_RANK
+                )
+            }
+        )
+
+        LIFEBUOY = create(
+            name = "lifebuoy",
+            category = CreativeModeTabs.TOOLS_AND_UTILITIES,
+            categoryRegister = { content, item ->
+                content.addAfter(KAYAK, item)
+            },
+            itemSupplier = { properties ->
+                properties.maxCount(1)
+                GenericBoatItem(
+                    properties = properties,
+                    boat = { level, x, y, z ->
+                        Lifebuoy(level, x, y, z)
+                    },
+                    speed = Lifebuoy.SPEED_RANK,
+                    mobility = Lifebuoy.MOBILITY_RANK,
+                    space = Lifebuoy.SPACE_RANK
+                )
             }
         )
 

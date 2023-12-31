@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(EnchantmentHelper.class)
-public class ExtraKnockbackNonEnchantmentMixin {
+public class EnchantmentHelperMixin {
 
     @Redirect(
             method = "getKnockbackBonus",

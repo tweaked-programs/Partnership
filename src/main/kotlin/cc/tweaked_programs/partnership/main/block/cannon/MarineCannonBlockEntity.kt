@@ -1,7 +1,6 @@
 package cc.tweaked_programs.partnership.main.block.cannon
 
 import cc.tweaked_programs.partnership.main.MOD_ID
-import cc.tweaked_programs.partnership.main.Partnership.logger
 import cc.tweaked_programs.partnership.main.entity.CannonballEntity
 import cc.tweaked_programs.partnership.main.menu.MarineCannonMenu
 import cc.tweaked_programs.partnership.main.registries.BlockEntityRegistries

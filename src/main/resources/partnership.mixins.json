@@ -3,9 +3,9 @@
   "package": "cc.tweaked_programs.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "BoatNotHurtByBowMixin",
-    "ExtraKnockbackNonEnchantmentMixin",
-    "PlayerNoSweepingEdgeWithPaddleMixin"
+    "BoatMixin",
+    "EnchantmentHelperMixin",
+    "PlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

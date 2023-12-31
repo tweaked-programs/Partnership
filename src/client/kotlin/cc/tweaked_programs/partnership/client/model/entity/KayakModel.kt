@@ -1,4 +1,4 @@
-package cc.tweaked_programs.partnership.client.model
+package cc.tweaked_programs.partnership.client.model.entity
 
 import cc.tweaked_programs.partnership.main.MOD_ID
 import cc.tweaked_programs.partnership.main.entity.Kayak

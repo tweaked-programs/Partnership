@@ -6,11 +6,11 @@ plugins {
   id "org.jetbrains.kotlin.jvm" version "1.9.21"
 }
 
-version = mod_version
+version = "v$mod_version"
 group = maven_group
 
 base {
-	archivesName = "${archives_base_name}-fabric-${minecraft_version}-v${mod_version}"
+	archivesName = "${archives_base_name}-fabric-mc${minecraft_version}"
 }
 
 repositories {

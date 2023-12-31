@@ -20,7 +20,7 @@ TODO
 		[-] Add variants									POLISHING
 			[x] Kayak
 			[ ] Paper ship
-			[ ] Lifebuoy
+			[x] Lifebuoy
 	[x] Add decorative stuff
 		[x] Metal scaffolding
 		[x] Marker buoys for borders on sea					POLISHING
@@ -29,11 +29,12 @@ TODO
 		[x] Hats
 			[x] Captain's hat
 			[x] Sailor's cap
-		[x] Marine Cannon									POLISHING
+		[x] Marine Cannon
 	[x] EMI Support
+	[x] Sort Item Group and secondary groups for items
 	[-] Redo textures but good this time
 	[ ] Add recipes
-	[x] Sort Item Group and secondary groups for items
+	[ ] Proper Sounds 										(optional)
 	[ ] Remove normal boat recipe
 */
 

@@ -59,6 +59,8 @@ class BoatyardBlockEntity(val pos: BlockPos, val state: BlockState) : BlockEntit
         return output
     }
 
+    fun rawRemoveItem(slot: Int, count: Int) = super.removeItem(slot, count)
+
     override fun getSlotsForFace(direction: Direction): IntArray = IntArray(INV_SIZE-1).mapIndexed { index, _ -> index }.toIntArray()
 
     override fun canPlaceItemThroughFace(i: Int, itemStack: ItemStack, direction: Direction?): Boolean = false
