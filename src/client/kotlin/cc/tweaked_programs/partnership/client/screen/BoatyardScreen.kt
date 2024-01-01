@@ -11,6 +11,8 @@ import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.player.Inventory
+import net.minecraft.world.item.BoatItem
+import kotlin.math.max
 
 class BoatyardScreen(
     menu: BoatyardMenu,
@@ -55,15 +57,23 @@ class BoatyardScreen(
         guiGraphics.drawString(font, playerInventoryTitle, inventoryLabelX, inventoryLabelY, 0x404040, false)
 
         val item = menu.getSlot(BoatyardMenu.RESULT_SLOT).item.item
-        if (item is GenericBoatItem) {
-            guiGraphics.drawString(font, Component.literal("⚡ ").withColor(0x16D2FC).append(primitiveProgressBar(item.speed)), imageWidth-30, 23, 0x404040, true)
-            guiGraphics.drawString(font, Component.literal("⚓ ").withColor(0xE53D51).append(primitiveProgressBar(item.mobility)), imageWidth-29, 23 + (font.lineHeight+3), 0x404040, true)
-            guiGraphics.drawString(font, Component.literal("✉ ").withColor(0x755146).append(primitiveProgressBar(item.space)), imageWidth-27, 23 + ((font.lineHeight+3)*2), 0x404040, true)
+        if (item is BoatItem) {
+            var speed = 5; var mobility = 5; var space = 5
+
+            if (item is GenericBoatItem) {
+                speed = item.speed
+                mobility = item.mobility
+                space = item.space
+            }
+
+            guiGraphics.drawString(font, Component.literal("⚡ ").withColor(0x16D2FC).append(primitiveProgressBar(speed+1)), imageWidth-30, 23, 0x404040, true)
+            guiGraphics.drawString(font, Component.literal("⚓ ").withColor(0xE53D51).append(primitiveProgressBar(mobility+1)), imageWidth-29, 23 + (font.lineHeight+3), 0x404040, true)
+            guiGraphics.drawString(font, Component.literal("✉ ").withColor(0x755146).append(primitiveProgressBar(space+1)), imageWidth-27, 23 + ((font.lineHeight+3)*2), 0x404040, true)
         }
     }
 
-    fun primitiveProgressBar(progress: Int): MutableComponent
+    private fun primitiveProgressBar(progress: Int): MutableComponent
         = Component.literal("|".repeat(progress/2)).withColor(0x55BB55)
             .append(if (progress % 2 == 0) Component.literal("|").withColor(0x338833) else Component.literal("|").withColor(0x333333))
-            .append(Component.literal("|".repeat(5-(progress+1)/2)).withColor(0x333333))
+            .append(Component.literal("|".repeat(max(0, 5-(progress+1)/2))).withColor(0x333333))
 }

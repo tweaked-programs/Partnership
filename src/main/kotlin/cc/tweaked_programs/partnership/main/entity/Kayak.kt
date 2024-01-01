@@ -19,8 +19,8 @@ class Kayak(type: EntityType<out Boat>, level: Level) : GenericBoat(type, level)
     override val rotationBoostForGoodDrivers: Float = .008f
 
     companion object {
-        const val SPEED_RANK: Int = 10
-        const val MOBILITY_RANK: Int = 10
+        const val SPEED_RANK: Int = 6
+        const val MOBILITY_RANK: Int = 4
         const val SPACE_RANK: Int = 10
     }
 

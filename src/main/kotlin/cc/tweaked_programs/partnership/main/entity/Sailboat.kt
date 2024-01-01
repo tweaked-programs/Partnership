@@ -19,9 +19,9 @@ class Sailboat(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
     override val rotationBoostForGoodDrivers: Float = .012f
 
     companion object {
-        const val SPEED_RANK: Int = 10
-        const val MOBILITY_RANK: Int = 10
-        const val SPACE_RANK: Int = 10
+        const val SPEED_RANK: Int = 8
+        const val MOBILITY_RANK: Int = 8
+        const val SPACE_RANK: Int = 3
     }
 
     constructor(level: Level, x: Double, y: Double, z: Double) : this(EntityRegistries.SAILBOAT, level) {
@@ -35,7 +35,7 @@ class Sailboat(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
 
     override fun getMaxPassengers(): Int = 1
 
-    private fun getPassengerZOffset(entity: Entity): Float = singlePassengerXOffset
+    private fun getPassengerZOffset(): Float = singlePassengerXOffset
 
     override fun positionRider(entity: Entity, moveFunction: MoveFunction) {
         super.positionRider(entity, moveFunction)
@@ -46,5 +46,5 @@ class Sailboat(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
     }
 
     override fun getPassengerAttachmentPoint(entity: Entity, entityDimensions: EntityDimensions, f: Float): Vector3f
-        = Vector3f(0.0f, entityDimensions.height / 2.5f, getPassengerZOffset(entity))
+        = Vector3f(0.0f, entityDimensions.height / 2.5f, getPassengerZOffset())
 }

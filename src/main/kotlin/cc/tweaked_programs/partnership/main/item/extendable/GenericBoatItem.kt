@@ -17,8 +17,6 @@ import net.minecraft.world.level.ClipContext
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.gameevent.GameEvent
 import net.minecraft.world.phys.HitResult
-import kotlin.reflect.full.declaredFunctions
-import kotlin.reflect.jvm.reflect
 
 class GenericBoatItem (
     properties: Properties,

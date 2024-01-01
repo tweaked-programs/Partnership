@@ -1,9 +1,9 @@
 package cc.tweaked_programs.partnership.main.registries
 
 import cc.tweaked_programs.partnership.main.MOD_ID
-import cc.tweaked_programs.partnership.main.block.buoy.BuoyBlock
 import cc.tweaked_programs.partnership.main.block.MetalScaffoldingBlock
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlock
+import cc.tweaked_programs.partnership.main.block.buoy.BuoyBlock
 import cc.tweaked_programs.partnership.main.block.buoy.ChainBuoyBlock
 import cc.tweaked_programs.partnership.main.block.cannon.MarineCannonBlock
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings

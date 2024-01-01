@@ -8,6 +8,7 @@ import net.minecraft.util.Mth
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityDimensions
 import net.minecraft.world.entity.EntityType
+import net.minecraft.world.entity.animal.Animal
 import net.minecraft.world.entity.vehicle.Boat
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.Level
@@ -21,9 +22,9 @@ class Lifebuoy(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
     override val rotationBoostForGoodDrivers: Float = 0.01F
 
     companion object {
-        const val SPEED_RANK: Int = 10
-        const val MOBILITY_RANK: Int = 10
-        const val SPACE_RANK: Int = 10
+        const val SPEED_RANK: Int = 3
+        const val MOBILITY_RANK: Int = 6
+        const val SPACE_RANK: Int = 2
     }
 
     constructor(level: Level, x: Double, y: Double, z: Double) : this(EntityRegistries.LIFEBUOY, level) {
@@ -41,6 +42,10 @@ class Lifebuoy(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
     override fun getMaxPassengers(): Int = 1
 
     override fun clampRotation(entity: Entity) {
+        if (entity is Animal) {
+            super.clampRotation(entity)
+            return
+        }
         val f = Mth.wrapDegrees(entity.yRot - this.yRot)
         entity.setYBodyRot(f + yRot)
         this.yRot += f
