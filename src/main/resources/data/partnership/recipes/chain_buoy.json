@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#W#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:chain"
+        },
+        "W": {
+            "item": "minecraft:white_concrete"
+        }
+    },
+    "result": {
+        "item": "partnership:chain_buoy",
+        "count": 8
+    }
+}

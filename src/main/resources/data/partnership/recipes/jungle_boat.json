@@ -1,0 +1,9 @@
+{
+  "type": "partnership:boatyard_construct_serializer",
+  "ingredients": [
+    {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1},
+    {"id": "minecraft:jungle_planks", "Count": 1}, {"id": "minecraft:wooden_shovel", "Count": 1}, {"id": "minecraft:wooden_shovel", "Count": 1}, {"id": "minecraft:jungle_planks", "Count": 1},
+    {"id": "minecraft:jungle_planks", "Count": 1}, {"id": "minecraft:jungle_planks", "Count": 1}, {"id": "minecraft:jungle_planks", "Count": 1}, {"id": "minecraft:jungle_planks", "Count": 1}
+  ],
+  "output": {"id": "minecraft:jungle_boat", "Count": 1}
+}

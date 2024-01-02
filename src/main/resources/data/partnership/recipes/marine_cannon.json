@@ -1,0 +1,9 @@
+{
+  "type": "partnership:boatyard_construct_serializer",
+  "ingredients": [
+    {"id": "minecraft:string", "Count": 3}, {"id": "minecraft:obsidian", "Count": 1}, {"id": "minecraft:obsidian", "Count": 1}, {"id": "minecraft:obsidian", "Count": 1},
+    {"id": "minecraft:air", "Count": 1}, {"id": "partnership:plank", "Count": 2}, {"id": "partnership:plank", "Count": 2}, {"id": "minecraft:air", "Count": 1},
+    {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}
+  ],
+  "output": {"id": "partnership:marine_cannon", "Count": 1}
+}

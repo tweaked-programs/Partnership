@@ -1,0 +1,13 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+	"X#",
+	"OO"
+	],
+	"key": {
+		"#": {"item":"minecraft:barrel"},
+		"X": {"item":"minecraft:crafting_table"},
+		"O": {"item":"minecraft:stick"}
+	},
+	"result": {"item":"partnership:boatyard"}
+}

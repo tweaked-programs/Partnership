@@ -1,0 +1,9 @@
+{
+  "type": "partnership:boatyard_construct_serializer",
+  "ingredients": [
+    {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}, {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}, {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}, {"id": "minecraft:yellow_glazed_terracotta", "Count": 1},
+    {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}, {"id": "partnership:paddle", "Count": 1}, {"id": "partnership:paddle", "Count": 1}, {"id": "partnership:paddle", "Count": 1},
+    {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}, {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}, {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}, {"id": "minecraft:yellow_glazed_terracotta", "Count": 1}
+  ],
+  "output": {"id": "partnership:kayak", "Count": 1}
+}

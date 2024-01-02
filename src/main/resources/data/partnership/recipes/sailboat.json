@@ -1,0 +1,9 @@
+{
+  "type": "partnership:boatyard_construct_serializer",
+  "ingredients": [
+    {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "partnership:canvas_roll", "Count": 6}, {"id": "minecraft:air", "Count": 1},
+    {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:stick", "Count": 1}, {"id": "minecraft:air", "Count": 1},
+    {"id": "partnership:plank", "Count": 1}, {"id": "partnership:plank", "Count": 1}, {"id": "partnership:plank", "Count": 1}, {"id": "partnership:plank", "Count": 1}
+  ],
+  "output": {"id": "partnership:sailboat", "Count": 1}
+}

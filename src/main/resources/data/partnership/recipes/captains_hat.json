@@ -1,0 +1,9 @@
+{
+  "type": "partnership:boatyard_construct_serializer",
+  "ingredients": [
+    {"id": "partnership:canvas_roll", "Count": 1}, {"id": "partnership:canvas_roll", "Count": 1}, {"id": "partnership:canvas_roll", "Count": 1}, {"id": "minecraft:air", "Count": 1},
+    {"id": "partnership:canvas_roll", "Count": 1}, {"id": "partnership:canvas_roll", "Count": 1}, {"id": "partnership:canvas_roll", "Count": 1}, {"id": "minecraft:black_carpet", "Count": 1},
+    {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}
+  ],
+  "output": {"id": "partnership:captains_hat", "Count": 1}
+}

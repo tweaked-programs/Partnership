@@ -1,0 +1,13 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		" a ",
+		"aba",
+		" a "
+	],
+	"key": {
+		"a":{"item":"minecraft:iron_bars"},
+		"b":{"item":"minecraft:scaffolding"}
+	},
+	"result": {"item": "partnership:metal_scaffolding","count": 2}
+}

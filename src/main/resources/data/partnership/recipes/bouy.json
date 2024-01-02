@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "I",
+        "R"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:torch"
+        },
+        "I": {
+            "item": "minecraft:iron_bars"
+        },
+        "R": {
+            "item": "minecraft:red_concrete"
+        }
+    },
+    "result": {
+        "item": "partnership:buoy",
+        "count": 1
+    }
+}

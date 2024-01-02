@@ -1,0 +1,9 @@
+{
+  "type": "partnership:boatyard_construct_serializer",
+  "ingredients": [
+    {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:white_wool", "Count": 2}, {"id": "minecraft:red_wool", "Count": 1}, {"id": "minecraft:air", "Count": 1},
+    {"id": "minecraft:red_wool", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:red_wool", "Count": 1},
+    {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:red_wool", "Count": 1}, {"id": "minecraft:white_wool", "Count": 2}, {"id": "minecraft:air", "Count": 1}
+  ],
+  "output": {"id": "partnership:lifebuoy", "Count": 1}
+}

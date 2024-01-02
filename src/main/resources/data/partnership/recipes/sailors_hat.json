@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:string"
+        },
+        {
+            "item": "partnership:canvas_roll"
+        },
+        {
+            "item": "minecraft:cyan_dye"
+        }
+    ],
+    "result": {
+        "item": "partnership:sailors_hat",
+        "count": 1
+    }
+}
