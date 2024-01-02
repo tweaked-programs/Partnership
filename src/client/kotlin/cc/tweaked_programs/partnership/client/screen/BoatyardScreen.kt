@@ -24,16 +24,15 @@ class BoatyardScreen(
     }
 
     override fun init() {
-        super.init()
-
         imageWidth = 183
         imageHeight = 178
 
         titleLabelX = 8
-        titleLabelY -= 6
-        inventoryLabelY += 5
+        titleLabelY = 0
+        inventoryLabelY = 79
 
-        //addWidget()
+        this.leftPos = (this.width - this.imageWidth) / 2 + 3
+        this.topPos = (this.height - this.imageHeight) / 2 + 6
     }
 
     override fun renderBg(guiGraphics: GuiGraphics, delta: Float, mouseX: Int, mouseY: Int) {
