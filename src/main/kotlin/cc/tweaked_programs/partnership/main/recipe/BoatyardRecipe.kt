@@ -37,6 +37,8 @@ class BoatyardRecipe(private val ingredients: MutableList<ItemStack> = MutableLi
 
     override fun canCraftInDimensions(i: Int, j: Int): Boolean = true
 
+    override fun isSpecial(): Boolean = true
+
     override fun getIngredients(): NonNullList<Ingredient> {
         val list = NonNullList.create<Ingredient>()
         list.addAll(ingredients.map { Ingredient.of(it) })
