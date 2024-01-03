@@ -1,5 +1,6 @@
 package cc.tweaked_programs.partnership.main.entity
 
+import cc.tweaked_programs.partnership.main.compat.Compat
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
 import net.minecraft.world.entity.Entity
@@ -15,7 +16,7 @@ class Kayak(type: EntityType<out Boat>, level: Level) : GenericBoat(type, level)
 
     override val maxSpeed: Float = .05f
     override val backwardsSpeed: Float = .01f
-    override val rotationSpeed: Float =.5F
+    override val rotationSpeed: Float = .5F
     override val rotationBoostForGoodDrivers: Float = .008f
 
     companion object {
@@ -33,7 +34,13 @@ class Kayak(type: EntityType<out Boat>, level: Level) : GenericBoat(type, level)
 
     override fun getSinglePassengerXOffset(): Float = 0.6F
 
-    override fun getMaxPassengers(): Int = 3
+    override fun getMaxPassengers(): Int {
+        passengers.forEach {
+            if (Compat.boatism.isEngine(it))
+                return 4
+        }
+        return 3
+    }
 
     fun getPassengerZOffset(entity: Entity): Float {
         val index = passengers.indexOf(entity)
@@ -58,6 +65,13 @@ class Kayak(type: EntityType<out Boat>, level: Level) : GenericBoat(type, level)
         }
     }
 
+    override fun clampRotation(entity: Entity) {
+        if (Compat.boatism.isEngine(entity))
+            entity.setYBodyRot(yRot)
+        else
+            super.clampRotation(entity)
+    }
+
     override fun getPassengerAttachmentPoint(entity: Entity, entityDimensions: EntityDimensions, f: Float): Vector3f
-        = Vector3f(0.0f, entityDimensions.height / 2.5f, getPassengerZOffset(entity))
+        = Vector3f(0.0F, entityDimensions.height / 2.5F, if (Compat.boatism.isEngine(entity)) -1.88F else getPassengerZOffset(entity))
 }

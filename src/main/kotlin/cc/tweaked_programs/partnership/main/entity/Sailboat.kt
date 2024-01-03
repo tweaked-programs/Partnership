@@ -1,5 +1,6 @@
 package cc.tweaked_programs.partnership.main.entity
 
+import cc.tweaked_programs.partnership.main.compat.Compat
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
 import net.minecraft.world.entity.Entity
@@ -46,5 +47,5 @@ class Sailboat(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
     }
 
     override fun getPassengerAttachmentPoint(entity: Entity, entityDimensions: EntityDimensions, f: Float): Vector3f
-        = Vector3f(0.0f, entityDimensions.height / 2.5f, getPassengerZOffset())
+        = Vector3f(0.0f, entityDimensions.height / 2.5f, if (Compat.boatism.isEngine(entity)) -1.44F else getPassengerZOffset())
 }

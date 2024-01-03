@@ -40,6 +40,10 @@ dependencies {
 	// Other dependencies
 	modApi "maven.modrinth:emi:${emi_version}"
 
+	// Optional compatibility
+	modApi "maven.modrinth:boatism:${boatism_version}"
+		modRuntimeOnly "maven.modrinth:cloth-config:13.0.121+fabric"
+
 	// Dev environment
 	modRuntimeOnly "maven.modrinth:sodium:${sodium_version}"
 	modRuntimeOnly "maven.modrinth:modmenu:${modmenu_version}"
@@ -94,7 +98,7 @@ tasks.withType(JavaCompile).configureEach {
 	it.options.release = 17
 }
 
-tasks.withType(KotlinCompile).all {
+tasks.withType(KotlinCompile).configureEach {
 	kotlinOptions {
 		jvmTarget = 17
 	}

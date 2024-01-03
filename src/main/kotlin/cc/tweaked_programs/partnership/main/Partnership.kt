@@ -1,5 +1,6 @@
 package cc.tweaked_programs.partnership.main
 
+import cc.tweaked_programs.partnership.main.compat.Compat
 import cc.tweaked_programs.partnership.main.registries.*
 import net.fabricmc.api.ModInitializer
 import org.slf4j.Logger
@@ -15,5 +16,7 @@ object Partnership : ModInitializer {
 	override fun onInitialize() {
 		// WAKE UP
 		BlockRegistries; BlockEntityRegistries; ItemRegistries; GroupRegistries; MenuRegistries; RecipeRegistries; EntityRegistries; NetworkRegistries
+
+		Compat.check()
 	}
 }

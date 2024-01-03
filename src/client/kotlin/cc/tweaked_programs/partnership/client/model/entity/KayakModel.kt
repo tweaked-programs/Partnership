@@ -1,6 +1,7 @@
 package cc.tweaked_programs.partnership.client.model.entity
 
 import cc.tweaked_programs.partnership.main.MOD_ID
+import cc.tweaked_programs.partnership.main.compat.Compat
 import cc.tweaked_programs.partnership.main.entity.Kayak
 import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexConsumer
@@ -47,7 +48,7 @@ class KayakModel(model: ModelPart) : EntityModel<Kayak>(), WaterPatchModel {
 
         if (kayak.passengers.size > 0)
             kayak.passengers.withIndex().forEach { (index, entity) ->
-                if (entity !is Animal)
+                if (entity !is Animal && !Compat.boatism.isEngine(entity))
                     getPaddle(index).render(poseStack, vertexConsumer, light, overlay, red, green, blue, alpha)
             }
         else getPaddle(0).render(poseStack, vertexConsumer, light, overlay, red, green, blue, alpha)
@@ -56,7 +57,7 @@ class KayakModel(model: ModelPart) : EntityModel<Kayak>(), WaterPatchModel {
     override fun setupAnim(kayak: Kayak, f: Float, g: Float, h: Float, i: Float, j: Float) {
         if (kayak.passengers.size > 0) {
             kayak.passengers.withIndex().forEach { (index, entity) ->
-                if (entity !is Animal)
+                if (entity !is Animal && !Compat.boatism.isEngine(entity))
                     paddleAnim(kayak, entity, index, f)
             }
         } else paddleAnim(kayak, null, 0, f)
@@ -76,14 +77,14 @@ class KayakModel(model: ModelPart) : EntityModel<Kayak>(), WaterPatchModel {
             paddle.setPos(0.0F, 0.0F, 2.5F-kayak.getPassengerZOffset(entity)*18F)
             paddle.setRotation(
                 (sin(time) * 0.2F),
-                (sin(time) * -0.6F),
-                (sin(time) * 0.24F + (if(time != 0F) -0.075F else 0F))
+                (sin(time + if (time != 0F) (index.toFloat() * -0.5F) else 0F) * -0.6F),
+                (sin(time) * 0.3F + (if(time != 0F) -0.075F else 0F))
             )
         }
         paddle.y += 23F
     }
 
-    private fun getPaddle(index: Int) = listOf(paddleOne, paddleTwo, paddleThree)[index]
+    private fun getPaddle(index: Int) = listOf(paddleOne, paddleTwo, paddleThree, paddleThree)[index]
 
     override fun waterPatch(): ModelPart = waterPatch
 

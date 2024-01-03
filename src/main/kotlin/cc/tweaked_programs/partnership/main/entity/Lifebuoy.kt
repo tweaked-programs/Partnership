@@ -1,5 +1,6 @@
 package cc.tweaked_programs.partnership.main.entity
 
+import cc.tweaked_programs.partnership.main.compat.Compat
 import cc.tweaked_programs.partnership.main.registries.EntityRegistries
 import cc.tweaked_programs.partnership.main.registries.ItemRegistries
 import net.minecraft.sounds.SoundEvent
@@ -37,12 +38,12 @@ class Lifebuoy(type: EntityType<out Boat>, level: Level) : GenericBoat(type, lev
     override fun getSinglePassengerXOffset(): Float = 0.6F
 
     override fun getPassengerAttachmentPoint(entity: Entity, entityDimensions: EntityDimensions, f: Float): Vector3f
-        = Vector3f(0.0f, entityDimensions.height / 3.0f - .3F, 0F)
+        = Vector3f(0.0f, entityDimensions.height / 3.0f - .3F, if (Compat.boatism.isEngine(entity)) -1.26F else 0F)
 
     override fun getMaxPassengers(): Int = 1
 
     override fun clampRotation(entity: Entity) {
-        if (entity is Animal) {
+        if (entity is Animal || Compat.boatism.isEngine(entity)) {
             super.clampRotation(entity)
             return
         }
