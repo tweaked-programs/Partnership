@@ -27,9 +27,9 @@ abstract class HumanoidModelMixin<T extends LivingEntity> {
     )
     private void partnership$tPose$poseLeftArm(T livingEntity, CallbackInfo ci) {
         if (livingEntity.getControlledVehicle() instanceof Lifebuoy) {
-            this.leftArm.xRot = -1.6f;
-            this.leftArm.yRot = -0.5f;
-            this.leftArm.zRot = 0.3f;
+            this.leftArm.xRot = -1.6F;
+            this.leftArm.yRot = -0.5F;
+            this.leftArm.zRot = 0.3F;
         }
     }
 
@@ -39,9 +39,9 @@ abstract class HumanoidModelMixin<T extends LivingEntity> {
     )
     private void partnership$tPose$poseRightArm(T livingEntity, CallbackInfo ci) {
         if (livingEntity.getControlledVehicle() instanceof Lifebuoy) {
-            this.rightArm.xRot = -1.6f;
-            this.rightArm.yRot = 0.5f;
-            this.rightArm.zRot = -0.3f;
+            this.rightArm.xRot = -1.6F;
+            this.rightArm.yRot = 0.5F;
+            this.rightArm.zRot = -0.3F;
         }
     }
 
@@ -53,16 +53,16 @@ abstract class HumanoidModelMixin<T extends LivingEntity> {
         if (livingEntity.getControlledVehicle() instanceof Lifebuoy) {
             float speed = (float) livingEntity.getDeltaMovement().lengthSqr();
 
-            this.rightLeg.xRot = -0.5f + speed;
-            this.rightLeg.yRot = 0.0f;
-            this.rightLeg.zRot = 0.1f;
+            this.rightLeg.xRot = -0.5F + speed;
+            this.rightLeg.yRot = 0.0F;
+            this.rightLeg.zRot = 0.1F;
 
-            this.leftLeg.xRot = -0.5f + speed;
-            this.leftLeg.yRot = 0.0f;
-            this.leftLeg.zRot = -0.1f;
+            this.leftLeg.xRot = -0.5F + speed;
+            this.leftLeg.yRot = 0.0F;
+            this.leftLeg.zRot = -0.1F;
 
-            AnimationUtils.bobModelPart(this.rightLeg, h, 1.0f);
-            AnimationUtils.bobModelPart(this.leftLeg, h, -1.5f);
+            AnimationUtils.bobModelPart(this.rightLeg, h, 1.0F);
+            AnimationUtils.bobModelPart(this.leftLeg, h, -1.5F);
         }
     }
 }

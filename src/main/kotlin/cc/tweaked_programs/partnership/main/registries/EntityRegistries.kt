@@ -40,7 +40,7 @@ object EntityRegistries {
     val SAILBOAT: EntityType<Sailboat> = create(
         name = "sailboat",
         type = FabricEntityTypeBuilder.create(MobCategory.MISC, ::Sailboat)
-            .dimensions(EntityDimensions(1.25F, 0.25F, false))
+            .dimensions(EntityDimensions(1.25F, 0.4F, false))
             .build()
     )
 
