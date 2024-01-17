@@ -48,7 +48,7 @@ object EntityRegistries {
         name = "cannonball",
         type = FabricEntityTypeBuilder.create(MobCategory.MISC, ::CannonballEntity)
             .dimensions(EntityDimensions.fixed(0.25f, 0.25f))
-            .trackRangeChunks(4)
+            .trackRangeChunks(32)
             .trackedUpdateRate(10)
             .build()
     )
