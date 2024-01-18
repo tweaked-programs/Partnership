@@ -51,6 +51,8 @@
 
   "itemGroup.partnership": "Partnership Mod",
 
+  "gamerule.boatDespawnTimer": "Boote verschwinden timer",
+
   "modmenu.partnership.modfest": "ModFest 1.20",
   "modmenu.partnership.kofi": "Ko-fi",
   "modmenu.partnership.modrinth": "Modrinth",

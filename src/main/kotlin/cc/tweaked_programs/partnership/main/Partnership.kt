@@ -15,7 +15,7 @@ object Partnership : ModInitializer {
 
 	override fun onInitialize() {
 		// WAKE UP
-		BlockRegistries; BlockEntityRegistries; ItemRegistries; GroupRegistries; MenuRegistries; RecipeRegistries; EntityRegistries; NetworkRegistries
+		BlockRegistries; BlockEntityRegistries; ItemRegistries; GroupRegistries; MenuRegistries; RecipeRegistries; EntityRegistries; NetworkRegistries; GameRuleRegistries
 
 		Compat.check()
 	}
