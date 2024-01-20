@@ -1,6 +1,7 @@
 package cc.tweaked_programs.partnership.main.registries
 
 import cc.tweaked_programs.partnership.main.MOD_ID
+import cc.tweaked_programs.partnership.main.block.AnchorBlock
 import cc.tweaked_programs.partnership.main.block.MetalScaffoldingBlock
 import cc.tweaked_programs.partnership.main.block.boatyard.BoatyardBlock
 import cc.tweaked_programs.partnership.main.block.buoy.BuoyBlock
@@ -12,6 +13,7 @@ import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.SoundType
+import net.minecraft.world.level.material.PushReaction
 
 
 object BlockRegistries {
@@ -73,5 +75,17 @@ object BlockRegistries {
             .sounds(SoundType.STONE)
             .strength(1.25F)
             .nonOpaque())
+    }
+
+    val ANCHOR = create(
+        name = "anchor"
+    ) { properties ->
+        AnchorBlock(
+            properties
+                .sounds(SoundType.METAL)
+                .strength(6F)
+                .pistonBehavior(PushReaction.IGNORE)
+                .nonOpaque()
+        )
     }
 }

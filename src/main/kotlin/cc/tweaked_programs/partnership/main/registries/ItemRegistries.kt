@@ -7,6 +7,7 @@ import cc.tweaked_programs.partnership.main.entity.Sailboat
 import cc.tweaked_programs.partnership.main.item.BoatyardItem
 import cc.tweaked_programs.partnership.main.item.Hat
 import cc.tweaked_programs.partnership.main.item.PaddleItem
+import cc.tweaked_programs.partnership.main.item.extendable.DescriptiveBlockItem
 import cc.tweaked_programs.partnership.main.item.extendable.DescriptivePlaceOnWaterBlockItem
 import cc.tweaked_programs.partnership.main.item.extendable.GenericBoatItem
 import cc.tweaked_programs.partnership.main.item.extendable.GenericDescriptiveBlockItem
@@ -56,6 +57,7 @@ object ItemRegistries {
     val PLANK: Item
     val MARINE_CANNON: Item
     val CANNONBALL: Item
+    val ANCHOR: Item
 
     init {
         KAYAK = create(
@@ -242,6 +244,15 @@ object ItemRegistries {
                 content.addAfter(PLANK, item)
             },
             itemSupplier = { properties -> Item(properties.maxCount(64)) }
+        )
+
+        ANCHOR = create(
+            name = "anchor",
+            category = CreativeModeTabs.BUILDING_BLOCKS,
+            categoryRegister = { content, item ->
+                content.addAfter(Items.NETHERITE_BLOCK, item)
+            },
+            itemSupplier = { properties -> DescriptiveBlockItem(BlockRegistries.ANCHOR, properties.maxCount(1)) }
         )
     }
 }

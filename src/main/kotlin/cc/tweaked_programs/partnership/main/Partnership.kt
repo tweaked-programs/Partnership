@@ -14,8 +14,16 @@ object Partnership : ModInitializer {
 	val logger: Logger = LoggerFactory.getLogger(MOD_ID)
 
 	override fun onInitialize() {
-		// WAKE UP
-		BlockRegistries; BlockEntityRegistries; ItemRegistries; GroupRegistries; MenuRegistries; RecipeRegistries; EntityRegistries; NetworkRegistries; GameRuleRegistries
+		BlockRegistries
+		BlockEntityRegistries
+		ItemRegistries
+		GroupRegistries
+		MenuRegistries
+		RecipeRegistries
+		EntityRegistries
+		NetworkRegistries
+		GameRuleRegistries
+		CommandRegistries
 
 		Compat.check()
 	}

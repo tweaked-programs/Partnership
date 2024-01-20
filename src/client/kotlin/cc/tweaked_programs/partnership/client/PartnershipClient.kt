@@ -42,6 +42,7 @@ object PartnershipClient : ClientModInitializer {
 	private fun blockRendering() {
 		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistries.METAL_SCAFFOLDING, RenderType.cutout())
 		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistries.BUOY, RenderType.cutout())
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistries.ANCHOR, RenderType.cutout())
 	}
 
 	private fun entityRendering() {

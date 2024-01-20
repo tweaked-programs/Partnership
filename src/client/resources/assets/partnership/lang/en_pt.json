@@ -10,6 +10,9 @@
   "block.partnership.chain_buoy": "Anchor Matey",
   "tooltip.block.partnership.chain_buoy": "Deployed to mark the boundaries betwixt buoys at sea.",
 
+  "block.partnership.anchor": "Bower",
+  "tooltip.block.partnership.anchor": "Perfect for docks to batten down the hatches of me boats.",
+
   "item.partnership.captains_hat": "Crown o' the Ship",
   "tooltip.item.partnership.captains_hat": "Worn by the Cap'n himself, aye!",
 
@@ -52,6 +55,11 @@
   "itemGroup.partnership": "Partnership Mod",
 
   "gamerule.boatDespawnTimer": "Boat despawn timer",
+
+  "command.partnership.feedback.error.players_only": "Only players can use this command.",
+  "command.partnership.feedback.dockableChunkStateNone": "Chunk %s is not being marked as dock.",
+  "command.partnership.feedback.dockableChunkStateOne": "Chunk %s has one anchor marking it as an dock.",
+  "command.partnership.feedback.dockableChunkStateMul": "Chunk %s has %s anchors marking it as an dock.",
 
   "modmenu.partnership.modfest": "ModFest 1.20",
   "modmenu.partnership.kofi": "Ko-fi",

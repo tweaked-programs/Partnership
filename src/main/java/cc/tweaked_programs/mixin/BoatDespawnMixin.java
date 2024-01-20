@@ -1,10 +1,12 @@
 package cc.tweaked_programs.mixin;
 
+import cc.tweaked_programs.partnership.main.level.command.MarkChunkAsSeaport;
 import cc.tweaked_programs.partnership.main.registries.GameRuleRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.VariantHolder;
 import net.minecraft.world.entity.vehicle.Boat;
@@ -40,26 +42,30 @@ abstract public class BoatDespawnMixin extends VehicleEntity implements VariantH
         int despawnTimer = getDespawnTimer();
         int definedDespawnTimer = getDefinedDespawnTimer(this.level());
 
-        if (definedDespawnTimer >= 0) {
-            // Boats should despawn
-            if (this.getPassengers().isEmpty()) {
-                // Countdown starts as boat is not being used anymore
-                if (despawnTimer > 0) {
-                    despawnTimer--;
+        if (definedDespawnTimer >= 0 && !this.level().isClientSide && this.level() instanceof ServerLevel serverLevel) {
+            int anchors = MarkChunkAsSeaport.INSTANCE.getAnchorsOfChunk(serverLevel, this.chunkPosition());
 
-                    // Make sure to stay in bounds
-                    if (despawnTimer > definedDespawnTimer)
-                        despawnTimer = definedDespawnTimer;
+            if (anchors <= 0) {
+                // Boats should despawn
+                if (this.getPassengers().isEmpty()) {
+                    // Countdown starts as boat is not being used anymore
+                    if (despawnTimer > 0) {
+                        despawnTimer--;
 
-                    // Update
-                    setDespawnTimer(despawnTimer);
-                } else if (despawnTimer == 0) {
-                    // Goodbye :)
-                    this.discard();
+                        // Make sure to stay in bounds
+                        if (despawnTimer > definedDespawnTimer)
+                            despawnTimer = definedDespawnTimer;
+
+                        // Update
+                        setDespawnTimer(despawnTimer);
+                    } else if (despawnTimer == 0) {
+                        // Goodbye :)
+                        this.discard();
+                    }
+                } else if (despawnTimer >= 0) {
+                    // Reset timer
+                    setDespawnTimer(getDefinedDespawnTimer(this.level()));
                 }
-            } else if (despawnTimer >= 0) {
-                // Reset timer
-                setDespawnTimer(getDefinedDespawnTimer(this.level()));
             }
         }
     }

@@ -5,5 +5,5 @@ import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry
 import net.minecraft.world.level.GameRules
 
 object GameRuleRegistries {
-    val BOAT_DESPAWN_TIMER = GameRuleRegistry.register("boatDespawnTimer", GameRules.Category.MISC, GameRuleFactory.createIntRule(-1))
+    val BOAT_DESPAWN_TIMER: GameRules.Key<GameRules.IntegerValue> = GameRuleRegistry.register("boatDespawnTimer", GameRules.Category.MISC, GameRuleFactory.createIntRule(-1))
 }

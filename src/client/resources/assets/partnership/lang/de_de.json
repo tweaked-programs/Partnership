@@ -10,6 +10,9 @@
   "block.partnership.chain_buoy": "Kettenboje",
   "tooltip.block.partnership.chain_buoy": "Geeignet zur Markierung von Grenzen auf dem Wasser zwischen Bojen.",
 
+  "block.partnership.anchor": "Anker",
+  "tooltip.block.partnership.anchor": "Ideal für Häfen zur Sicherung von Booten.",
+
   "item.partnership.captains_hat": "Kapitänsmütze",
   "tooltip.item.partnership.captains_hat": "Wird vom Kapitän persönlich getragen.",
 
@@ -52,6 +55,11 @@
   "itemGroup.partnership": "Partnership Mod",
 
   "gamerule.boatDespawnTimer": "Boote verschwinden timer",
+
+  "command.partnership.feedback.error.players_only": "Nur Spieler können diesen Befehl verwenden.",
+  "command.partnership.feedback.dockableChunkStateNone": "Chunk %s wurde nicht als Hafen markiert.",
+  "command.partnership.feedback.dockableChunkStateOne": "Chunk %s wurde mit einem Anker als Hafen markiert.",
+  "command.partnership.feedback.dockableChunkStateMul": "Chunk %s hat %s Anker, die es als Hafen markieren.",
 
   "modmenu.partnership.modfest": "ModFest 1.20",
   "modmenu.partnership.kofi": "Ko-fi",

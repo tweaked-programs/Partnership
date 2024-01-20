@@ -1,0 +1,9 @@
+{
+  "type": "partnership:boatyard_construct_serializer",
+  "ingredients": [
+    {"id": "minecraft:netherite_hoe", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1},
+    {"id": "minecraft:iron_ingot", "Count": 1}, {"id": "minecraft:iron_ingot", "Count": 1}, {"id": "minecraft:iron_ingot", "Count": 1}, {"id": "minecraft:chain", "Count": 2},
+    {"id": "minecraft:netherite_hoe", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}, {"id": "minecraft:air", "Count": 1}
+  ],
+  "output": {"id": "partnership:anchor", "Count": 1}
+}
