@@ -1,5 +1,6 @@
 package cc.tweaked_programs.mixin;
 
+import cc.tweaked_programs.partnership.main.compat.Compat;
 import cc.tweaked_programs.partnership.main.level.command.MarkChunkAsSeaport;
 import cc.tweaked_programs.partnership.main.registries.GameRuleRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -7,6 +8,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.VariantHolder;
 import net.minecraft.world.entity.vehicle.Boat;
@@ -17,6 +19,8 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.util.List;
 
 @Mixin(Boat.class)
 abstract public class BoatDespawnMixin extends VehicleEntity implements VariantHolder<Boat.Type> {
@@ -46,8 +50,16 @@ abstract public class BoatDespawnMixin extends VehicleEntity implements VariantH
             int anchors = MarkChunkAsSeaport.INSTANCE.getAnchorsOfChunk(serverLevel, this.chunkPosition());
 
             if (anchors <= 0) {
+                List<Entity> passengers = this.getPassengers();
+                boolean hasMotor = false;
+                for (Entity entity : passengers)
+                    if (Compat.INSTANCE.getBoatism().isEngine(entity)) {
+                        hasMotor = true;
+                        break;
+                    }
+
                 // Boats should despawn
-                if (this.getPassengers().isEmpty()) {
+                if (passengers.isEmpty() || (passengers.size() == 1 && hasMotor)) {
                     // Countdown starts as boat is not being used anymore
                     if (despawnTimer > 0) {
                         despawnTimer--;

@@ -63,5 +63,8 @@
 	"recommends": {
 		"modmenu": "~${modmenu_version}",
 		"emi": "~${emi_version}"
+	},
+	"breaks": {
+		"boatism": "<${boatism_version}"
 	}
 }

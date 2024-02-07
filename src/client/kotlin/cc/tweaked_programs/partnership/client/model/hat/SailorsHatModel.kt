@@ -27,7 +27,7 @@ class SailorsHatModel(val root: ModelPart) : Model(Function { resourceLocation: 
 
     fun setupAnim(humanoidModel: HumanoidModel<LivingEntity>) {
         root.setRotation(humanoidModel.hat.xRot, humanoidModel.hat.yRot, humanoidModel.hat.zRot)
-        root.y = -1.0F
+        root.setPos(humanoidModel.hat.x, humanoidModel.hat.y, humanoidModel.hat.z)
     }
 
     companion object {
@@ -37,11 +37,11 @@ class SailorsHatModel(val root: ModelPart) : Model(Function { resourceLocation: 
             val meshdefinition = MeshDefinition()
             val partdefinition = meshdefinition.root
 
-            val bb_main = partdefinition.addOrReplaceChild(
+            /*val bb_main = */partdefinition.addOrReplaceChild(
                 "main",
                 CubeListBuilder.create().texOffs(0, 0)
                     .addBox(-3.0f, -3.0f, -3.0f, 6.0f, 3.0f, 6.0f, CubeDeformation(0.0f)),
-                PartPose.offset(0.0f, -7.0f, 0.0f)
+                PartPose.offset(0.0f, -8.0f, 0.0f)
             )
 
             return LayerDefinition.create(meshdefinition, 32, 32)

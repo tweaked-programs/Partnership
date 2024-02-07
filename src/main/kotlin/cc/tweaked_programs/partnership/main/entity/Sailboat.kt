@@ -14,7 +14,7 @@ import org.joml.Vector3f
 
 class Sailboat(type: EntityType<out Boat>, level: Level) : GenericBoat(type, level) {
 
-    override val maxSpeed: Float = .0575f
+    override val maxSpeed: Float = .055f
     override val backwardsSpeed: Float = .03f
     override val rotationSpeed: Float =.8F
     override val rotationBoostForGoodDrivers: Float = .012f

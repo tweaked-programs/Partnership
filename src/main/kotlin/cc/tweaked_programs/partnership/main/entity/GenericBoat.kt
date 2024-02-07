@@ -1,5 +1,6 @@
 package cc.tweaked_programs.partnership.main.entity
 
+import cc.tweaked_programs.partnership.main.Partnership
 import cc.tweaked_programs.partnership.main.compat.Compat
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.EntityType
@@ -36,6 +37,7 @@ abstract class GenericBoat(type: EntityType<out Boat>, level: Level) : Boat(type
             speed -= backwardsSpeed
 
         speed += Compat.boatism.calculateThrust(this)
+        Partnership.logger.info("$speed")
 
         deltaMovement = deltaMovement.add(
             (Mth.sin(-yRot * MAGIKK) * speed).toDouble(),
@@ -52,7 +54,5 @@ abstract class GenericBoat(type: EntityType<out Boat>, level: Level) : Boat(type
 
     companion object {
         const val MAGIKK: Float = (PI.toFloat() / 180f)
-
-        const val MAX_RANK: Int = 10
     }
 }
