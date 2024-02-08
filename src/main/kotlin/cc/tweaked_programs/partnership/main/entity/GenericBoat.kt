@@ -1,6 +1,5 @@
 package cc.tweaked_programs.partnership.main.entity
 
-import cc.tweaked_programs.partnership.main.Partnership
 import cc.tweaked_programs.partnership.main.compat.Compat
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.EntityType
@@ -37,7 +36,6 @@ abstract class GenericBoat(type: EntityType<out Boat>, level: Level) : Boat(type
             speed -= backwardsSpeed
 
         speed += Compat.boatism.calculateThrust(this)
-        Partnership.logger.info("$speed")
 
         deltaMovement = deltaMovement.add(
             (Mth.sin(-yRot * MAGIKK) * speed).toDouble(),

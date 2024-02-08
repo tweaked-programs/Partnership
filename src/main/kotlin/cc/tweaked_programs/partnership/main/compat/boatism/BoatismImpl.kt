@@ -14,7 +14,9 @@ class BoatismImpl : BoatismCompat() {
         val coupler = boat as BoatEngineCoupler
         var speed = 0.0f
         coupler.`boatism$getBoatEngineEntityUuid`()?.let { uuid: Optional<UUID> ->
-                EntityHandler.getBoatEngineEntityFromUuid(uuid.getOrNull(), boat.level(), boat.position(), 10)?.also {
+                EntityHandler.getBoatEngineEntityFromUuid(uuid.getOrNull(), boat.level(), boat.position(), 10)?.let {
+                    if (it.getOrNull() == null)
+                        return 0.0f
                     val thrust = it.get().engineHandler.calculateThrustModifier(boat)
                     val powerLevel = it.get().powerLevel * 0.008f
                     speed = powerLevel * thrust
