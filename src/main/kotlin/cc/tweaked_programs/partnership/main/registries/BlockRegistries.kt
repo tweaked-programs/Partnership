@@ -13,6 +13,7 @@ import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.SoundType
+import net.minecraft.world.level.material.MapColor
 import net.minecraft.world.level.material.PushReaction
 
 
@@ -35,6 +36,7 @@ object BlockRegistries {
         BoatyardBlock(
             properties
                 .strength(1F)
+                .mapColor(MapColor.METAL)
                 .sounds(SoundType.STONE)
         )
     }
@@ -45,6 +47,7 @@ object BlockRegistries {
         MetalScaffoldingBlock(
             properties
                 .strength(0.9F)
+                .mapColor(MapColor.METAL)
                 .sounds(SoundType.METAL)
                 .nonOpaque()
         )
@@ -55,6 +58,7 @@ object BlockRegistries {
     ) { properties ->
         BuoyBlock(properties
             .strength(0.1F)
+            .mapColor(MapColor.COLOR_RED)
             .nonOpaque()
             .sounds(SoundType.CHAIN))
     }
@@ -64,6 +68,7 @@ object BlockRegistries {
     ) { properties ->
         ChainBuoyBlock(properties
             .strength(0.075F)
+            .mapColor(MapColor.METAL)
             .nonOpaque()
             .sounds(SoundType.CHAIN))
     }
@@ -73,6 +78,7 @@ object BlockRegistries {
     ) { properties ->
         MarineCannonBlock(properties
             .sounds(SoundType.STONE)
+            .mapColor(MapColor.COLOR_BLACK)
             .strength(1.25F)
             .nonOpaque())
     }
@@ -83,6 +89,7 @@ object BlockRegistries {
         AnchorBlock(
             properties
                 .sounds(SoundType.METAL)
+                .mapColor(MapColor.COLOR_BLACK)
                 .strength(6F)
                 .pistonBehavior(PushReaction.IGNORE)
                 .nonOpaque()
